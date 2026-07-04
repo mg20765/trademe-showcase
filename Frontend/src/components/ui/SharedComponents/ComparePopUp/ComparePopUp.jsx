@@ -6,7 +6,7 @@
 
 import { useState } from "react";
 import ComparePopupIcon from "./ComparePopUpIcon";
-import DoubleArrow from "../assets/DoubleArrow.svg";
+import DoubleArrow from "../../../../assets/DoubleArrow.svg";
 import styles from "./ComparePopUp.module.css";
 
 import mockCompareItems from "./mockCompareItems";
