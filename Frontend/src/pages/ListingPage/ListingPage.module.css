@@ -4,9 +4,9 @@
 
 .topSection {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 24px;
-  margin-bottom: 30px;
+  grid-template-columns: minmax(500px, 700px) minmax(350px, 420px);
+  justify-content: center;
+  gap: 40px;
 }
 
 .listingImage {
@@ -47,6 +47,19 @@
 
 .similarListing {
   min-height: 250px;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageAds {
+  min-height: 200px;
+
+  margin-bottom: 30px;
 
   border: 1px solid #ddd;
   border-radius: 4px;
