@@ -1,7 +1,9 @@
-import "./App.css";
+import CategoryPage from "./pages/CategoryPage";
 
-function App() {
-  return <div></div>;
+export default function App() {
+  return (
+    <div className="app-container">
+      <CategoryPage />
+    </div>
+  );
 }
-
-export default App;
