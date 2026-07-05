@@ -12,10 +12,7 @@ import styles from "./ComparePopUp.module.css";
 import mockCompareItems from "./mockCompareItems";
 
 export default function ComparePopUp() {
-  // Temporary: always show the icon while developing.
-  // Later this can become compareItems.length > 0
-  const showIcon = true;
-
+  const [showCompare, setShowCompare] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Temporary mock data until backend is connected
@@ -24,8 +21,6 @@ export default function ComparePopUp() {
   const removeItem = (id) => {
     setCompareItems((items) => items.filter((item) => item.id !== id));
   };
-
-  if (!showIcon) return null;
 
   return (
     <div className={styles.container}>
