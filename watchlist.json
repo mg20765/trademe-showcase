@@ -1,0 +1,57 @@
+[
+  {
+    "_id": {
+      "$oid": "6a48cc07cc1d21c9ee0373aa"
+    },
+    "itemId": "6a423df859a83e8f448dd127",
+    "title": "Wall Mounted Hanging Case",
+    "price_nzd": 29.95,
+    "location": "Christchurch",
+    "category": "bookshelves",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6a48c663cc1d21c9ee0373a8"
+    },
+    "itemId": "6a423df859a83e8f448dd129",
+    "title": "Metal Black Geometric Bookend",
+    "price_nzd": 33.71,
+    "location": "International",
+    "category": "bookshelves",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6a48c4aecc1d21c9ee0373a5"
+    },
+    "itemId": "6a423df859a83e8f448dd130",
+    "title": "Cambridge Rimu Bookcase",
+    "price_nzd": 50,
+    "location": "Waikato",
+    "category": "bookshelves",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6a48c3c2cc1d21c9ee0373a4"
+    },
+    "itemId": "6a423e9df119996f5db45f22",
+    "title": "Cintesi Commercial Cafe Chair",
+    "price_nzd": 25,
+    "location": "Kumeu",
+    "category": "chairs",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6a47c19cac297ba3fd0c1dd0"
+    },
+    "itemId": "6a423df859a83e8f448dd12a",
+    "title": "Standard 3 Tier Book Shelf",
+    "price_nzd": 37,
+    "location": "Auckland City",
+    "category": "bookshelves",
+    "__v": 0
+  }
+]
