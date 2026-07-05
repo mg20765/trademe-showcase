@@ -1,12 +1,14 @@
 .page {
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 8%;
 }
 
 .topSection {
   display: grid;
-  grid-template-columns: minmax(500px, 700px) minmax(350px, 420px);
-  justify-content: center;
-  gap: 40px;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: start;
 }
 
 .listingImage {
