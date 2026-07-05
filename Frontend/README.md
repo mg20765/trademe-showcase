@@ -1,23 +1,17 @@
 # 🛋️ TradeMe Frontend - Marketplace & Category View
 
-<p align="center">
-  <img src="https://shields.io" alt="Status Active" />
-  <img src="https://shields.io" alt="Environment Dev" />
-  <img src="https://shields.io" alt="MERN Stack" />
-</p>
-
 The core frontend application for browsing, searching, bidding, and managing marketplace listings. This application interacts with the TradeMe Clone Backend to provide a seamless user experience for filtering, watchlisting, and comparing items.
 
 ---
 
 ## 🎨 Tech Stack & Visual Highlights
 
-| Category | Technologies & Tools |
-| :--- | :--- |
-| **Frontend Core** | ![React](https://shields.io) ![JavaScript](https://shields.io) |
-| **Backend & Runtime** | ![Node.js](https://shields.io) ![Express](https://shields.io) |
-| **Database & Security** | ![MongoDB](https://shields.io) ![CORS](https://shields.io) |
-| **State & API** | ![Custom Hooks](https://shields.io) ![Fetch API](https://shields.io) |
+| Category                | Technologies & Tools                                                 |
+| :---------------------- | :------------------------------------------------------------------- |
+| **Frontend Core**       | ![React](https://shields.io) ![JavaScript](https://shields.io)       |
+| **Backend & Runtime**   | ![Node.js](https://shields.io) ![Express](https://shields.io)        |
+| **Database & Security** | ![MongoDB](https://shields.io) ![CORS](https://shields.io)           |
+| **State & API**         | ![Custom Hooks](https://shields.io) ![Fetch API](https://shields.io) |
 
 ---
 
@@ -57,13 +51,15 @@ src/
 ## 🚀 Getting Started
 
 ### 📋 Prerequisites
-* **Node.js** installed on your local machine.
-* **MongoDB** instance running locally or via Atlas.
-* **Backend server** configuring CORS to allow connections from your frontend domain.
+
+- **Node.js** installed on your local machine.
+- **MongoDB** instance running locally or via Atlas.
+- **Backend server** configuring CORS to allow connections from your frontend domain.
 
 ### 🛠️ Installation & Setup
 
 1. **Install dependencies:**
+
    ```bash
    npm install
    ```
@@ -78,16 +74,20 @@ src/
 ## 💡 Key Features & Implementation
 
 ### 🛡️ 1. Centralized Hooks & Services
-* **Watchlist:** The `usewatchList` hook manages immediate, responsive local updates and interfaces with the backend to store user favorites.
-* **Comparison Matrix:** The `useCompare` hook and `compareService` synchronize selected listings, allowing users to compare details dynamically across the UI.
+
+- **Watchlist:** The `usewatchList` hook manages immediate, responsive local updates and interfaces with the backend to store user favorites.
+- **Comparison Matrix:** The `useCompare` hook and `compareService` synchronize selected listings, allowing users to compare details dynamically across the UI.
 
 ### 🔗 2. API & CORS Integration
+
 The client communicates securely with your local Express backend. Ensure your backend has `cors` enabled to avoid cross-origin blocking:
+
 ```javascript
 const API_URL = "http://localhost:3001/api/listings";
 ```
 
 ### ⚡ 3. Modular Architecture
+
 UI actions (like placing bids, purchasing instantly, and heart reactions) are split into isolated components under `ui/SharedComponents` to ensure fast rendering performance and structural reusability.
 
 ---
@@ -114,5 +114,6 @@ Here are the exciting features planned for upcoming layout iterations:
   </tr>
 </table>
 
-***
+---
+
 <p align="center">Built with ❤️ for the TradeMe Clone Ecosystem</p>
