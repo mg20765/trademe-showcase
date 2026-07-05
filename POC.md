@@ -1,12 +1,12 @@
 # Proof of Concept (PoC) - Team 3 (Mission 5, Phase 2)
 
-This document serves as our Proof of Concept (PoC), confirming successful full-stack connectivity between our React Frontend, Express Backend API, and Cloud MongoDB Atlas Cluster database instance.
+This document serves as our Proof of Concept (PoC), confirming successful full-stack connectivity between our React Frontend, Express Backend API, and Cloud MongoDB Compass database instance.
 
 ## 🛠️ Tech Stack Verification
 
 - **Frontend Framework:** React (.jsx / Custom Hooks)
 - **Backend Runtime:** Node.js & Express.js (Port 3001)
-- **Database Engine:** MongoDB Atlas (Cloud Cluster)
+- **Database Engine:** MongoDB Compass (Cloud Cluster)
 - **ORM / Driver:** Mongoose / MongoDB Native Driver
 
 ## 🏗️ System Architecture Flow
