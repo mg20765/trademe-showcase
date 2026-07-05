@@ -116,4 +116,9 @@ Here are the exciting features planned for upcoming layout iterations:
 
 ---
 
-<p align="center">Built with ❤️ for the TradeMe Clone Ecosystem</p>
+<p align="center">BrAInBots team:
+BekahW
+Mg20765
+ryanjonesnm-svg
+varungit111
+</p>
