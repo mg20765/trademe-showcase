@@ -22,6 +22,10 @@ export default function CategoryPage() {
   const [error, setError] = useState(null);
 
   const { watchlistIds, toggleWatchlist } = useWatchlist();
+  const [searchTerm, setSearchTerm] = useState("");
+  const filteredItems = items.filter((item) =>
+    item.title?.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
 
   useEffect(() => {
     // AbortController is the modern way to cancel fetch requests
@@ -55,7 +59,7 @@ export default function CategoryPage() {
 
     // Cleanup function runs when currentCategory changes or component unmounts
     return () => controller.abort();
-  }, [currentCategory]);
+  }, [currentCategory, searchTerm]);
 
   return (
     <div className="site-wrapper">
@@ -66,8 +70,16 @@ export default function CategoryPage() {
             <input
               type="text"
               placeholder={`Search across ${currentCategory}...`}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <button className="search-btn">Search</button>
+            <button
+              className="search-btn"
+              onClick={() => setSearchTerm("")}
+              aria-label="Clear search"
+            >
+              ✕
+            </button>
           </div>
           <div className="nav-links">
             <span>Watchlist</span>
@@ -82,7 +94,12 @@ export default function CategoryPage() {
           <h1 className="hero-title">ALL CATEGORIES</h1>
 
           <div className="hero-search-bar">
-            <input type="text" placeholder="Search" />
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
             <button className="hero-clear-btn" aria-label="Clear search">
               ✕
             </button>
@@ -140,16 +157,16 @@ export default function CategoryPage() {
             <>
               <header className="results-header">
                 <h2>
-                  Showing {items.length} results in{" "}
+                  Showing {filteredItems.length} results in{" "}
                   <span>{currentCategory}</span>
                 </h2>
               </header>
 
               <div className="product-grid">
-                {items.length === 0 ? (
+                {filteredItems.length === 0 ? (
                   <p className="no-items">No items found in this category.</p>
                 ) : (
-                  items.map((item) => {
+                  filteredItems.map((item) => {
                     // Ensure we use the correct ID property
                     const itemId = item._id || item.id;
                     return (

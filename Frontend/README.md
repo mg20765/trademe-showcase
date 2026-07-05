@@ -1,6 +1,6 @@
-# 🛋️ TradeMe Frontend - Marketplace & Category View
+# 🛋️ TradeMe - Marketplace & Category View
 
-The core frontend application for browsing, searching, bidding, and managing marketplace listings. This application interacts with the TradeMe Clone Backend to provide a seamless user experience for filtering, watchlisting, and comparing items.
+This application is used for browsing, searching, bidding, and managing marketplace listings. This application interacts with the TradeMe Clone Backend to provide a seamless user experience for filtering, watchlisting, and comparing items.
 
 ---
 
@@ -8,7 +8,7 @@ The core frontend application for browsing, searching, bidding, and managing mar
 
 | Category                | Technologies & Tools                                                 |
 | :---------------------- | :------------------------------------------------------------------- |
-| **Frontend Core**       | ![React](https://shields.io) ![JavaScript](https://shields.io)       |
+| **Frontend **           | ![React](https://shields.io) ![JavaScript](https://shields.io)       |
 | **Backend & Runtime**   | ![Node.js](https://shields.io) ![Express](https://shields.io)        |
 | **Database & Security** | ![MongoDB](https://shields.io) ![CORS](https://shields.io)           |
 | **State & API**         | ![Custom Hooks](https://shields.io) ![Fetch API](https://shields.io) |
@@ -17,34 +17,44 @@ The core frontend application for browsing, searching, bidding, and managing mar
 
 ## 📂 Project Structure
 
-```plaintext
+The server was refactored from one large file into an MVC structure:
+
+databaseserver.js # App setup, DB connection, route mounting
+models/
+listingModel.js # Chair, Bookshelf schemas/models
+watchlistModel.js # Watchlist schema/model
+compareModel.js # Compare schema/model
+controllers/
+categoryController.js # getChairs, getBookshelves
+watchlistController.js # getWatchlist, addToWatchlist, removeFromWatchlist
+compareController.js # getCompareList, addToCompare, removeFromCompare
+routes/
+categoryRoutes.js # GET /api/listings/chairs, /bookshelves
+watchlistRoutes.js # GET/POST/DELETE /api/watchlist
+compareRoutes.js # GET/POST/DELETE /api/compare
+
+All API endpoints are unchanged from the original single-file version —
+this was a structure-only refactor, not a behavior change.
+
+Frontend (src/)
+
 src/
-├── components/
-│   └── ui/SharedComponents/
-│       ├── ComparePopup.jsx       # Modal for item comparisons
-│       ├── ConfirmBuyNow.jsx      # Purchase confirmation modal
-│       ├── Navbar.jsx             # Global application navigation
-│       ├── PlaceBidButton.jsx     # Action button for placing bids
-│       ├── WatchlistButton.jsx    # General watchlist action handler
-│       ├── WatchlistcheckIcon.jsx # Status icon for watchlisted items
-│       └── WatchlistHeart.jsx     # Visual heart indicator for items
-├── hooks/
-│   ├── useCompare.js              # State logic for item comparison matrix
-│   └── usewatchList.js            # State logic for user watchlists
-├── pages/
-│   ├── CategoryPage.css           # Styling for category browser view
-│   ├── CategoryPage.jsx           # Grid view container for categories
-│   ├── ComparePage.jsx            # Detailed side-by-side comparison matrix
-│   ├── HomePage.jsx               # Landing page with featured listings
-│   ├── ListingPage.jsx            # Single product detail view
-│   └── PlaceBidPage.jsx           # Bidding workflow interface
-├── services/
-│   └── compareService.js          # API abstraction layer for comparisons
-├── App.css                        # Main application styles
-├── App.jsx                        # Layout and routing configuration
-├── index.css                      # Global design system variables
-└── main.jsx                       # DOM mounting point
-```
+pages/
+CategoryPage.jsx # Data fetching + state, composes subcomponents below
+components/
+CategoryPage/
+SearchBar.jsx # Top nav search input
+HeroSection.jsx # Hero banner search + refine
+Sidebar.jsx # Category menu + condition filters
+ProductGrid.jsx # Results header + item cards
+ui/
+SharedComponents/
+CategoryCard.jsx
+WatchlistButton.jsx
+CompareButton-sml.jsx
+WatchlistcheckIcon.jsx
+hooks/
+useWatchlist.js # Watchlist add/remove/load logic
 
 ---
 

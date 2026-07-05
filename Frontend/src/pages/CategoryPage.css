@@ -274,6 +274,11 @@ body {
     display: none;
   }
 }
+@media (max-width: 481px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* =========================================================================
    5. PRODUCT CARD DESIGN

@@ -11,7 +11,7 @@ This document serves as our Proof of Concept (PoC), confirming successful full-s
 
 ## 🏗️ System Architecture Flow
 
-[Client Browser] ──(HTTP Fetch)──> [Express Server (localhost:3001)] ──(Mongoose)──> [MongoDB Atlas Cloud Cluster]
+[Client Browser] ──(HTTP Fetch)──> [Express Server (localhost:3001)] ──(Mongoose)──> [MongoDB Atlas Compass Cloud Cluster]
 
 ## ⚡ Verified Working Endpoints
 
