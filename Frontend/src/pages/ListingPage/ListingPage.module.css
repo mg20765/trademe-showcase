@@ -1,12 +1,14 @@
 .page {
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 8%;
 }
 
 .topSection {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 24px;
-  margin-bottom: 30px;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: start;
 }
 
 .listingImage {
@@ -47,6 +49,19 @@
 
 .similarListing {
   min-height: 250px;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageAds {
+  min-height: 200px;
+
+  margin-bottom: 30px;
 
   border: 1px solid #ddd;
   border-radius: 4px;

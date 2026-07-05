@@ -1,28 +1,31 @@
 import styles from "./ListingInfo.module.css";
+import mockListing from "../mockListing";
 
-export default function ListingInfo() {
+export default function ListingInfo({ onCompare }) {
+  const listing = mockListing;
+
   return (
     <section className={styles.container}>
       {/* === Header === */}
 
       <div className={styles.header}>
-        <h1 className={styles.title}>Bookshelf, HomeMart - A</h1>
+        <div className={styles.headerTop}>
+          <h1>{listing.title}</h1>
 
-        <p className={styles.date}>Listed: Wednesday 16 June</p>
+          <div className={styles.actions}>
+            <button>❤ Watchlist</button>
+            <button onClick={onCompare}>⇄ Compare</button>
+          </div>
+        </div>
 
-        <p className={styles.date}>Closes: Friday 26 June, 9:00am</p>
+        <p>Listed: {listing.listedDate}</p>
 
-        <p className={styles.seller}>
-          Listed by <strong>JohnHalo117</strong>
+        <p>Closing: {listing.closingDate}</p>
+
+        <p>
+          Listed by:
+          <strong> {listing.seller}</strong>
         </p>
-      </div>
-
-      {/* ==== Actions ==== */}
-
-      <div className={styles.actions}>
-        <button>❤ Watchlist</button>
-
-        <button>⇄ Compare</button>
       </div>
 
       {/* === Pricing === */}
@@ -30,14 +33,14 @@ export default function ListingInfo() {
       <div className={styles.pricing}>
         <div className={styles.priceCard}>
           <h3>Current Bid</h3>
-          <h2>$200.00</h2>
+          <h2>{listing.currentBid}</h2>
 
           <button className={styles.bidButton}>Place Bid</button>
         </div>
 
         <div className={styles.priceCard}>
           <h3>Buy Now</h3>
-          <h2>$249.00</h2>
+          <h2>{listing.buyNow}</h2>
 
           <button className={styles.buyButton}>Buy Now</button>
         </div>
@@ -49,23 +52,12 @@ export default function ListingInfo() {
         <h2>Details</h2>
 
         <div className={styles.detailsGrid}>
-          <span>Dimensions</span>
-          <span>80 × 29 × 175 cm</span>
-
-          <span>Weight</span>
-          <span>34kg</span>
-
-          <span>Condition</span>
-          <span>New</span>
-
-          <span>Material</span>
-          <span>Wood / Metal</span>
-
-          <span>Finish</span>
-          <span>Wood-look Melamine</span>
-
-          <span>Colour</span>
-          <span>Walnut</span>
+          {listing.details.map((detail) => (
+            <div key={detail.label} className={styles.detailRow}>
+              <span>{detail.label}</span>
+              <span>{detail.value}</span>
+            </div>
+          ))}
         </div>
       </div>
 
