@@ -18,6 +18,14 @@
   flex-direction: column;
   gap: 8px;
 }
+.headerTop {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+
+  margin-bottom: 20px;
+}
 
 .title {
   margin: 0;
@@ -116,6 +124,9 @@
   grid-template-columns: 150px 1fr;
 
   row-gap: 10px;
+}
+.detailRow {
+  display: contents;
 }
 
 /* ---Summary ---*/
