@@ -1,9 +1,6 @@
 import styles from "./ListingInfo.module.css";
-import mockListing from "../mockListing";
 
-export default function ListingInfo({ onCompare }) {
-  const listing = mockListing;
-
+export default function ListingInfo({ listing, onCompare }) {
   return (
     <section className={styles.container}>
       {/* === Header === */}
@@ -33,14 +30,23 @@ export default function ListingInfo({ onCompare }) {
       <div className={styles.pricing}>
         <div className={styles.priceCard}>
           <h3>Current Bid</h3>
-          <h2>{listing.currentBid}</h2>
-
+          <h2>
+            {listing.price_nzd.toLocaleString("en-NZ", {
+              style: "currency",
+              currency: "NZD",
+            })}
+          </h2>{" "}
           <button className={styles.bidButton}>Place Bid</button>
         </div>
 
         <div className={styles.priceCard}>
           <h3>Buy Now</h3>
-          <h2>{listing.buyNow}</h2>
+          <h2>
+            {listing.buyNow.toLocaleString("en-NZ", {
+              style: "currency",
+              currency: "NZD",
+            })}
+          </h2>
 
           <button className={styles.buyButton}>Buy Now</button>
         </div>
@@ -65,15 +71,10 @@ export default function ListingInfo({ onCompare }) {
 
       <div className={styles.section}>
         <h2>Seller's Summary</h2>
-
         <ul>
-          <li>Contemporary and simple style</li>
-
-          <li>Strong and durable construction</li>
-
-          <li>Made with wood and black metal accents</li>
-
-          <li>Suitable for home office or living room</li>
+          {listing.summary.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </div>
     </section>
