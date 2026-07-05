@@ -5,6 +5,8 @@ import { connectDB } from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import comparisonRoutes from "./routes/comparisonRoutes.js";
+import homeRoutes from "./routes/homeRoutes.js";
+
 
 dotenv.config();
 connectDB();
@@ -14,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/products", productRoutes);
+app.use("/api/home", homeRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/comparisons", comparisonRoutes);
 
