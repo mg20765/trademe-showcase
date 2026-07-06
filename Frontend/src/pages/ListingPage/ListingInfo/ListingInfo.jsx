@@ -17,7 +17,7 @@ export default function ListingInfo({ listing, onCompare }) {
 
         <p>Listed: {listing.listedDate}</p>
 
-        <p>Closing: {listing.closingDate}</p>
+        <p>Closes: {listing.closingDate}</p>
 
         <p>
           Listed by:
