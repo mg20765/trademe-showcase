@@ -1,15 +1,14 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
-import CompareIcon from "./assets/CompareIcon.svg?react";
-
-import ComparePopUp from "../src/components/ui/SharedComponents/ComparePopUp/ComparePopUp";
-import ListingPage from "../src/pages/ListingPage/ListingPage";
+import ListingPage from "./pages/ListingPage/ListingPage";
 
 function App() {
   return (
-    <div>
-      <ListingPage />
-    </div>
+    <Routes>
+      <Route path="/" element={<ListingPage />} />
+      <Route path="/listing/:id" element={<ListingPage />} />
+    </Routes>
   );
 }
 
