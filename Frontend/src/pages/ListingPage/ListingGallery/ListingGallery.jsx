@@ -4,31 +4,30 @@ import styles from "./ListingGallery.module.css";
 import LeftArrow from "../../../assets/LeftArrow.svg";
 import RightArrow from "../../../assets/RightArrow.svg";
 
-import mockGallery from "./mockGallery";
-
-export default function ListingGallery() {
-  const [selectedImage, setSelectedImage] = useState(mockGallery[0]);
+export default function ListingGallery({ listing }) {
+  const galleryImages = ["/bookshelf1.jpg", "/bookshelf2.jpg", "/bookshelf3.jpg", "/bookshelf4.jpg"];
+  const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
 
   const showPreviousImage = () => {
-    const currentIndex = mockGallery.findIndex((photo) => photo.id === selectedImage.id);
+    const currentIndex = galleryImages.indexOf(selectedImage);
 
-    const previousIndex = currentIndex === 0 ? mockGallery.length - 1 : currentIndex - 1;
+    const previousIndex = currentIndex === 0 ? galleryImages.length - 1 : currentIndex - 1;
 
-    setSelectedImage(mockGallery[previousIndex]);
+    setSelectedImage(galleryImages[previousIndex]);
   };
 
   const showNextImage = () => {
-    const currentIndex = mockGallery.findIndex((photo) => photo.id === selectedImage.id);
+    const currentIndex = galleryImages.indexOf(selectedImage);
 
-    const nextIndex = currentIndex === mockGallery.length - 1 ? 0 : currentIndex + 1;
+    const nextIndex = currentIndex === galleryImages.length - 1 ? 0 : currentIndex + 1;
 
-    setSelectedImage(mockGallery[nextIndex]);
+    setSelectedImage(galleryImages[nextIndex]);
   };
 
   return (
     <div className={styles.gallery}>
       <div className={styles.mainImageContainer}>
-        <img src={selectedImage.image} alt="Listing" className={styles.mainImage} />
+        <img src={selectedImage} alt="Listing" className={styles.mainImage} />
 
         <button className={`${styles.arrowButton} ${styles.leftArrow}`} onClick={showPreviousImage}>
           <img src={LeftArrow} alt="Previous image" />
@@ -40,8 +39,8 @@ export default function ListingGallery() {
       </div>
 
       <div className={styles.thumbnailRow}>
-        {mockGallery.map((photo) => (
-          <img key={photo.id} src={photo.image} alt={`Thumbnail ${photo.id}`} className={`${styles.thumbnail} ${selectedImage.id === photo.id ? styles.activeThumbnail : ""}`} onClick={() => setSelectedImage(photo)} />
+        {galleryImages.map((image, index) => (
+          <img key={index} src={image} alt={`Thumbnail ${index + 1}`} className={`${styles.thumbnail} ${selectedImage === image ? styles.activeThumbnail : ""}`} onClick={() => setSelectedImage(image)} />
         ))}
       </div>
     </div>
