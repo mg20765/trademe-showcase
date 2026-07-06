@@ -1,0 +1,164 @@
+{
+  "listings": [
+    {
+      "id": "6a423e9df119996f5db45f1e",
+      "item_num": 1,
+      "title": "Phenomenal Nood Armchair",
+      "condition": "Used",
+      "location": "Manukau",
+      "price_nzd": 1
+    },
+    {
+      "id": "6a423e9df119996f5db45f1f",
+      "item_num": 2,
+      "title": "Halo Timothy Oulton Leather Chair",
+      "condition": "Used",
+      "location": "Manukau",
+      "price_nzd": 1
+    },
+    {
+      "id": "6a423e9df119996f5db45f20",
+      "item_num": 3,
+      "title": "Occasional Lounge Chair",
+      "condition": "Used",
+      "location": "Auckland City",
+      "price_nzd": 1
+    },
+    {
+      "id": "6a423e9df119996f5db45f21",
+      "item_num": 4,
+      "title": "Vintage Armchair",
+      "condition": "Used",
+      "location": "Auckland City",
+      "price_nzd": 1
+    },
+    {
+      "id": "6a423e9df119996f5db45f22",
+      "item_num": 5,
+      "title": "Cintesi Commercial Cafe Chair",
+      "condition": "Used",
+      "location": "Kumeu",
+      "price_nzd": 25
+    },
+    {
+      "id": "6a423e9df119996f5db45f23",
+      "item_num": 6,
+      "title": "Banquet Event Seating Chair",
+      "condition": "New",
+      "location": "Christchurch",
+      "price_nzd": 35.99
+    },
+    {
+      "id": "6a423e9df119996f5db45f24",
+      "item_num": 7,
+      "title": "Colonial Style Tub Chair",
+      "condition": "Used",
+      "location": "Manukau",
+      "price_nzd": 35
+    },
+    {
+      "id": "6a423e9df119996f5db45f25",
+      "item_num": 8,
+      "title": "Lazyboy Type Recliner Chair",
+      "condition": "Used",
+      "location": "Auckland City",
+      "price_nzd": 40
+    },
+    {
+      "id": "6a423e9df119996f5db45f26",
+      "item_num": 9,
+      "title": "Velvet Shell Accent Chair",
+      "condition": "Used",
+      "location": "Manukau",
+      "price_nzd": 45
+    },
+    {
+      "id": "6a423e9df119996f5db45f27",
+      "item_num": 10,
+      "title": "Plastic Chair with Soft Cushion",
+      "condition": "New",
+      "location": "Manukau",
+      "price_nzd": 59.99
+    },
+    {
+      "id": "6a423e9df119996f5db45f28",
+      "item_num": 11,
+      "title": "Mid-Century Style Dining Chair",
+      "condition": "Used",
+      "location": "Auckland City",
+      "price_nzd": 60
+    },
+    {
+      "id": "6a423e9df119996f5db45f29",
+      "item_num": 12,
+      "title": "Modern Mid-Century Chair",
+      "condition": "Used",
+      "location": "Auckland City",
+      "price_nzd": 85
+    },
+    {
+      "id": "6a423e9df119996f5db45f2a",
+      "item_num": 13,
+      "title": "Foldable Outdoor Chairs (2 Pcs)",
+      "condition": "New",
+      "location": "Lower Hutt",
+      "price_nzd": 89.1
+    },
+    {
+      "id": "6a423e9df119996f5db45f2b",
+      "item_num": 14,
+      "title": "Zoe Ivory PU Leather Dining Chair",
+      "condition": "New",
+      "location": "Auckland City",
+      "price_nzd": 90
+    },
+    {
+      "id": "6a423e9df119996f5db45f2c",
+      "item_num": 15,
+      "title": "Eden Spectrum 3 Office Chair",
+      "condition": "Used",
+      "location": "North Shore",
+      "price_nzd": 120
+    },
+    {
+      "id": "6a423e9df119996f5db45f2d",
+      "item_num": 16,
+      "title": "Occasional Lounge Bedroom Chair",
+      "condition": "Used",
+      "location": "North Shore",
+      "price_nzd": 120
+    },
+    {
+      "id": "6a423e9df119996f5db45f2e",
+      "item_num": 17,
+      "title": "Cushioned Dining Chair (4 Pcs)",
+      "condition": "New",
+      "location": "Onehunga",
+      "price_nzd": 175
+    },
+    {
+      "id": "6a423e9df119996f5db45f2f",
+      "item_num": 18,
+      "title": "Freedom Fidel Leather Recliner",
+      "condition": "Used",
+      "location": "Manukau",
+      "price_nzd": 200
+    },
+    {
+      "id": "6a423e9df119996f5db45f30",
+      "item_num": 19,
+      "title": "La-Z-Boy Manual Recliner",
+      "condition": "Used",
+      "location": "Kapiti",
+      "price_nzd": 200
+    },
+    {
+      "id": "6a423e9df119996f5db45f31",
+      "item_num": 20,
+      "title": "Barcelona Style Replica Lounge",
+      "condition": "New",
+      "location": "Auckland City",
+      "price_nzd": 249
+    }
+  ]
+}
