@@ -1,7 +1,7 @@
 import express from "express";
 import {
   getComparisonList,
-  addToComparisonList,
+  addToComparison,
   removeFromComparison,
   clearComparison,
 } from "../controllers/comparisonController.js";
