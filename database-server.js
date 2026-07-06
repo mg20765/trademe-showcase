@@ -2,7 +2,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(express.json());
 
@@ -17,7 +17,7 @@ function readCategory() {
     return {};
   }
 }
-app.get("api/listings/chairs", (req, res) => {
+app.get("/api/listings/chairs", (req, res) => {
   const chairs = readCategory("chairs.json");
   res.json(chairs);
 });
