@@ -1,14 +1,21 @@
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
-
-import ListingPage from "./pages/ListingPage/ListingPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import CategoryPage from "./pages/CategoryPage";
+import ListingPage from "./pages/ListingPage";
+import ComparePage from "./pages/ComparePage";
+import PlaceBidPage from "./pages/PlaceBidPage";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<ListingPage />} />
-      <Route path="/listing/:id" element={<ListingPage />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/category" element={<CategoryPage />} />
+        <Route path="/listing/:id" element={<ListingPage />} />
+        <Route path="/compare" element={<ComparePage />} />
+        <Route path="/place-bid/:id" element={<PlaceBidPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
