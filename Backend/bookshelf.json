@@ -10,7 +10,6 @@
       "location": "Auckland City",
       "price_nzd": 25.99
     },
-
     {
       "_id": {
         "$oid": "6a423df859a83e8f448dd124"
