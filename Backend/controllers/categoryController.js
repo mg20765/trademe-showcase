@@ -1,4 +1,4 @@
-import { Chair, Bookshelf } from "../models/listingModel.js";
+import { Chair, Bookshelf } from "../bookshelf.json";
 
 export const getChairs = async (req, res) => {
   try {

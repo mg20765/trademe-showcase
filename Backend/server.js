@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import productRoutes from "./routes/productRoutes.js";
-import categoryRoutes from "./routes/categoryRoutes.js";
+// import categoryRoutes from "./routes/categoryRoutes.js";
 import comparisonRoutes from "./routes/comparisonRoutes.js";
 import homeRoutes from "./routes/homeRoutes.js";
 
@@ -23,7 +23,7 @@ app.use("/api/categories", categoryRoutes);
 app.use("/api/comparisons", comparisonRoutes);
 app.use("/api/listings", listingRoute);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
