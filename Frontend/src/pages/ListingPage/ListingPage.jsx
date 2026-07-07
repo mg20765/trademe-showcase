@@ -6,6 +6,8 @@ import styles from "./ListingPage.module.css";
 import ListingGallery from "./ListingGallery/ListingGallery";
 import ListingInfo from "./ListingInfo/ListingInfo";
 import ComparePopUp from "../../components/ui/SharedComponents/ComparePopUp/ComparePopUp";
+import Questions from "./ListingQuestions/ListingQuestions";
+import SimilarListings from "./SimilarListings/SimilarListings";
 
 export default function ListingPage() {
   const { id } = useParams();
@@ -39,10 +41,9 @@ export default function ListingPage() {
           <ListingInfo listing={listing} onCompare={handleCompare} />
         </div>
 
-        <div className={styles.listingQuestions}>Questions & Answers</div>
+        <Questions questions={listing.questions} />
 
-        <div className={styles.similarListing}>Similar Listings Available</div>
-
+        <SimilarListings listings={listing.similarListings} />
         {showCompare && <ComparePopUp />}
       </main>
     </>
