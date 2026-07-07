@@ -6,20 +6,22 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 .mainImageContainer {
   position: relative;
 
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 850px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  border: 1px solid #ddd;
-  border-radius: 8px;
   overflow: hidden;
+
+  background: #fff;
 }
 .mainImage {
   width: 100%;
@@ -36,6 +38,7 @@
 .thumbnail {
   width: 80px;
   height: 80px;
+  margin-bottom: 40px;
 
   object-fit: cover;
 
