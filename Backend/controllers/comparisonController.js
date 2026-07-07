@@ -1,4 +1,4 @@
-import comparison from "../models/Comparison.js";
+import Comparison from "../models/Comparison.js";
 
 // Get /api/comparison
 export const getComparisonList = async (req, res) => {
@@ -7,14 +7,14 @@ export const getComparisonList = async (req, res) => {
     const comparisonList = await Comparison.findOne({ sessionId }).populate(
       "productIds",
     );
-    res.json(comparison || { sessionId, productIds: [] });
+    res.json(comparisonList || { sessionId, productIds: [] });
   } catch (error) {
     res.status(500).json({ message: "Failed to get a comparison list" });
   }
 };
 
 // Post /api/comparison
-export const addToComparisonList = async (req, res) => {
+export const addToComparison = async (req, res) => {
   try {
     const { sessionId, productId } = req.body;
 
@@ -34,7 +34,7 @@ export const addToComparisonList = async (req, res) => {
     }
 
     await comparison.save();
-    res.json(201).json(comparison);
+    res.status(201).json(comparison);
   } catch (error) {
     res.status(500).json({ message: "Failed to add product to comparison" });
   }
@@ -46,11 +46,11 @@ export const removeFromComparison = async (req, res) => {
     const { sessionId } = req.query;
     const { productId } = req.params;
 
-    const comprarison = await Comparison.findOne({ sessionId });
+    const comparison = await Comparison.findOne({ sessionId });
     if (!comparison) {
       return res.status(404).json({ message: "Comparison list not found" });
     }
-    comparison.productIds = comprison.productIds.filter(
+    comparison.productIds = comparison.productIds.filter(
       (id) => id.toString() !== productId,
     );
     await comparison.save();
