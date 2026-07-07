@@ -1,0 +1,64 @@
+.container {
+  padding: 2rem;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.breadcrumbLink {
+  color: #0a6bc4;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.clearButton {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.addButtonWrapper {
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addButton {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #d0e8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #0a6bc4;
+  cursor: pointer;
+  text-decoration: none;
+}
