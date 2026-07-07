@@ -12,7 +12,7 @@ const seedProducts = async () => {
         await mongoose.connect(process.env.MONGO_URI);
         console.log("MongoDB connected for seeding");
 
-        const rawData = fs.readFileSync("./data/bookshelf.json", "utf-8");
+        const rawData = fs.readFileSync("./bookshelf.json", "utf-8");
         const jsonData = JSON.parse(rawData);
 
         //  Support both formats of bookshelf.json
@@ -21,7 +21,16 @@ const seedProducts = async () => {
         await Product.deleteMany(); // Clear existing products
         console.log ("Old products removed");
 
-        await Product.insertMany(listings);
+        const cleanedListings = listings.map((item) => {
+  const { _id, ...rest } = item;
+
+  return {
+    ...rest,
+    image: item.image || item.images?.[0] || "",
+  };
+});
+
+await Product.insertMany(cleanedListings);
         console.log("bookshelf.json data seeded successfully");
         process.exit();
     } catch (error) {
