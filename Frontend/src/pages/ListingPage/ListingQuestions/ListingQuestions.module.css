@@ -39,7 +39,8 @@
 }
 
 .askQuestion textarea {
-  width: 50%;
+  width: 100%; /* was 50% */
+  max-width: 50%; /* ensures it never shrinks */
   padding: 12px;
   resize: vertical;
   border: 1px solid #ccc;
@@ -49,6 +50,7 @@
 }
 
 .askQuestion button {
+  display: block; /* forces it onto its own line */
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   border: none;

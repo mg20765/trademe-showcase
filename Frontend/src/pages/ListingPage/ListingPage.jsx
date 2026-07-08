@@ -13,18 +13,23 @@ import BidConfirmationModal from "../../components/ui/SharedComponents/BidConfir
 
 export default function ListingPage() {
   // The bidding and buy now modals
+  const [listing, setListing] = useState(null);
+
+  // The bidding and buy now modals
   const [showBidModal, setShowBidModal] = useState(false);
   const [showBidConfirmation, setShowBidConfirmation] = useState(false);
+
+  // Start at 0, update once listing loads
   const [bidAmount, setBidAmount] = useState(0);
 
   const { id } = useParams();
-  const [listing, setListing] = useState(null);
 
   // Compare Popup
   const [showCompare, setShowCompare] = useState(false);
   const handleCompare = () => {
     setShowCompare(true);
   };
+
   useEffect(() => {
     fetch(`http://localhost:5001/api/listings/${id || 1}`)
       .then((res) => res.json())
@@ -35,9 +40,17 @@ export default function ListingPage() {
       .catch((err) => console.error(err));
   }, [id]);
 
+  // Set bidAmount once listing is available
+  useEffect(() => {
+    if (listing) {
+      setBidAmount(listing.price_nzd + 1);
+    }
+  }, [listing]);
+
   if (!listing) {
     return <p>Loading...</p>;
   }
+
   return (
     <>
       <main className={styles.page}>
