@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./ListingGallery.module.css";
 
 import LeftArrow from "../../../assets/LeftArrow.svg";
 import RightArrow from "../../../assets/RightArrow.svg";
 
 export default function ListingGallery({ listing }) {
-  const galleryImages = ["/bookshelf1.jpg", "/bookshelf2.jpg", "/bookshelf3.jpg", "/bookshelf4.jpg"];
-  const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
+  const galleryImages = listing.images || [];
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    if (galleryImages.length > 0) {
+      setSelectedImage(galleryImages[0]);
+    }
+  }, [galleryImages]);
+
+  if (galleryImages.length === 0) {
+    return <p>No images available.</p>;
+  }
 
   const showPreviousImage = () => {
     const currentIndex = galleryImages.indexOf(selectedImage);
