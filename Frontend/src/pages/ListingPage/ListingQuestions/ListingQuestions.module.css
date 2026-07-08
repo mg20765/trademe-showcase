@@ -39,7 +39,7 @@
 }
 
 .askQuestion textarea {
-  width: 100%;
+  width: 50%;
   padding: 12px;
   resize: vertical;
   border: 1px solid #ccc;
