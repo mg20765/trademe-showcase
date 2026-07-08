@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./BidConfirmationModal.module.css";
+import PlaceBidButton from "../PlaceBidButton";
 
 export default function BidConfirmationModal({ bidAmount, onCancel, onConfirm }) {
   const [accepted, setAccepted] = useState(false);
@@ -29,12 +30,10 @@ export default function BidConfirmationModal({ bidAmount, onCancel, onConfirm })
         </label>
 
         <div className={styles.buttonRow}>
+          <PlaceBidButton className={styles.placeBidButton} disabled={!accepted} onClick={onConfirm} style={{ backgroundColor: "#2878d8" }} />
+
           <button className={styles.cancelButton} onClick={onCancel}>
             Cancel
-          </button>
-
-          <button className={styles.placeBidButton} disabled={!accepted} onClick={onConfirm}>
-            Place Bid
           </button>
         </div>
       </div>
