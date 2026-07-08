@@ -10,6 +10,7 @@ import Questions from "./ListingQuestions/ListingQuestions";
 import SimilarListings from "./SimilarListings/SimilarListings";
 import PlaceBidModal from "../../components/ui/SharedComponents/PlaceBidModal/PlaceBidModal.jsx";
 import BidConfirmationModal from "../../components/ui/SharedComponents/BidConfirmationModal/BidConfirmationModal.jsx";
+import { useCompare } from "../../components/Context/CompareContext.jsx";
 
 export default function ListingPage() {
   // The bidding and buy now modals
@@ -26,7 +27,9 @@ export default function ListingPage() {
 
   // Compare Popup
   const [showCompare, setShowCompare] = useState(false);
+  const { addToCompare } = useCompare();
   const handleCompare = () => {
+    addToCompare(listing);
     setShowCompare(true);
   };
 
@@ -60,12 +63,9 @@ export default function ListingPage() {
           </div>
           <ListingInfo listing={listing} onCompare={handleCompare} onPlaceBid={() => setShowBidModal(true)} />{" "}
         </div>
-
         <Questions questions={listing.questions} />
-
         <SimilarListings listings={listing.similarListings} />
-        {showCompare && <ComparePopUp />}
-
+        {showCompare && <ComparePopUp />}{" "}
         {showBidModal && (
           <PlaceBidModal
             listing={listing}
@@ -78,7 +78,6 @@ export default function ListingPage() {
             }}
           />
         )}
-
         {showBidConfirmation && (
           <BidConfirmationModal
             bidAmount={bidAmount}
