@@ -1,30 +1,33 @@
 import express from "express";
-import Listing from "../models/listingModel.js";
+import Product from "../models/Product.js";
 
 const router = express.Router();
 
-// Get ALL listing items
+// Get all products
 router.get("/", async (req, res) => {
   try {
-    const listings = await Listing.find();
-    res.json(listings);
+    const products = await Product.find();
+    res.json(products);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
-// Get listing by item_num
+// Get product by item_num
 router.get("/:item_num", async (req, res) => {
   try {
-    const listing = await Listing.findOne({
+    const product = await Product.findOne({
       item_num: Number(req.params.item_num),
     });
 
-    if (!listing) {
-      return res.status(404).json({ message: "Listing not found" });
+    console.log(product);
+    console.log(product.images);
+
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
     }
 
-    res.json(listing);
+    res.json(product);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
