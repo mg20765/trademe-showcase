@@ -12,7 +12,7 @@ const seedProducts = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     console.log("MongoDB connected for seeding");
 
-    const rawData = fs.readFileSync("../bookshelf.json", "utf-8");
+    const rawData = fs.readFileSync("./bookshelf.json", "utf-8");
     const jsonData = JSON.parse(rawData);
 
     // Support both formats of bookshelf.json
