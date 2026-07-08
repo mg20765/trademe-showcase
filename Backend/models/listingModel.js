@@ -7,6 +7,7 @@ const listingSchema = new mongoose.Schema(
     condition: String,
     location: String,
     price_nzd: Number,
+
     seller: String,
     listedDate: String,
     closingDate: String,
