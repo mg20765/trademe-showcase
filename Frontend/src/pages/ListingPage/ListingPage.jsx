@@ -66,7 +66,10 @@ export default function ListingPage() {
           <div className={styles.listingImage}>
             <ListingGallery listing={listing} />
           </div>
-          <ListingInfo listing={listing} onCompare={handleCompare} onPlaceBid={() => setShowBidModal(true)} />{" "}
+
+          <div className={styles.listingInfo}>
+            <ListingInfo listing={listing} onCompare={handleCompare} onPlaceBid={() => setShowBidModal(true)} />
+          </div>
         </div>
         <Questions questions={listing.questions} />
         <SimilarListings listings={listing.similarListings} />
