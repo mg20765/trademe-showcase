@@ -8,6 +8,7 @@
   display: flex;
   align-items: stretch;
   gap: 2rem;
+  margin-top: 20px;
 }
 
 .listingImage,
