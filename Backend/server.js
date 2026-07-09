@@ -8,11 +8,12 @@ import comparisonRoutes from "./routes/comparisonRoutes.js";
 import homeRoutes from "./routes/homeRoutes.js";
 
 import listingRoute from "./routes/listingRoute.js";
+import watchlistRoutes from "./routes/watchlistRoutes.js";
 
 dotenv.config();
-connectDB();
 
 const app = express();
+connectDB();
 
 app.use(cors());
 app.use(express.json());
@@ -22,7 +23,7 @@ app.use("/api/home", homeRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/comparisons", comparisonRoutes);
 app.use("/api/listings", listingRoute);
-
+app.use("/api/watchlist", watchlistRoutes);
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

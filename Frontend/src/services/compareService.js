@@ -1,6 +1,14 @@
 //Temporary until authentication is added
 const SESSION_ID = "user-session-id";
+const BASE_URL = "http://localhost:5001/api/comparisons"; // Adjust this to your backend URL
 
+const handleResponse = async (response) => {
+  if (!response.ok) {
+    const errText = await response.text();
+    throw new Error(`Request failed: ${response.status} ${errText}`);
+  }
+  return response.json();
+};
 //GET /api/comparison
 export const getComparisonList = async () => {
   const response = await fetch(`/api/comparisons?sessionId=${SESSION_ID}`);

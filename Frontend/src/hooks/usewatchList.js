@@ -6,7 +6,7 @@ export default function useWatchlist() {
   useEffect(() => {
     let ignore = false;
 
-    fetch("http://localhost:3001/api/watchlist")
+    fetch("http://localhost:5001/api/watchlist")
       .then((res) => res.json())
       .then((data) => {
         if (!ignore) {
@@ -26,7 +26,7 @@ export default function useWatchlist() {
 
     try {
       if (alreadyIn) {
-        await fetch(`http://localhost:3001/api/watchlist/${itemId}`, {
+        await fetch(`http://localhost:5001/api/watchlist/${itemId}`, {
           method: "DELETE",
         });
         setWatchlistIds((prev) => {
