@@ -35,20 +35,3 @@ export default function Questions({ questions = [] }) {
     </section>
   );
 }
-
-// const questions = [
-//   {
-//     id: 1,
-//     question: "Does this bookshelf come assembled?",
-//     answer: "No, it requires assembly. Instructions and all hardware are included.",
-//     askedBy: "SarahM",
-//     date: "2 days ago",
-//   },
-//   {
-//     id: 2,
-//     question: "Are the shelves adjustable?",
-//     answer: "The middle shelves are fixed, while the top and bottom shelves are adjustable.",
-//     askedBy: "TomNZ",
-//     date: "5 days ago",
-//   },
-// ];
