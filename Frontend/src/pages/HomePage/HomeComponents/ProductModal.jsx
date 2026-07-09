@@ -6,6 +6,8 @@ function ProductModal({ product, onClose }) {
      // Use whichever price field is available from the backend
     const price = product.price_nzd || product.price || product.start_price || 0;
 
+    const imageUrl = product.image || product.images?.[0];
+
     return (
     <div className="product-modal__overlay" onClick={onClose}>
 
@@ -19,13 +21,13 @@ function ProductModal({ product, onClose }) {
 
         {/* Product image section. */}
         <div className="product-modal__image">
-            {product.image ? (
-            <img src={product.image} alt={product.title} />
+            {imageUrl ? (
+        <img src={imageUrl} alt={product.title} />
             ) : (
             <div>Image coming soon</div>
-            )}
+        )}
         </div>
-        
+
         {/* Product information displayed inside the popup */}
         <div className="product-modal__details">
             <p className="product-modal__location">
@@ -38,9 +40,29 @@ function ProductModal({ product, onClose }) {
             Condition: {product.condition || "Not provided"}
             </p>
 
+            {/* Product details */}
+            <div className="product-modal__details-list">
+            <h3>Product Details</h3>
+
+                {product.details?.length ? (
+                <ul>
+                {product.details.map((detail, index) => (
+                <li key={detail._id || index}>
+                <strong>{detail.label}: </strong>
+                {detail.value}
+                </li>
+            ))}
+            </ul>
+                ) : (
+            <p>No product details available.</p>
+        )}
+        </div>
+
+            {product.description && (
             <p className="product-modal__description">
-            {product.description || "No description available yet."}
+            {product.description}
             </p>
+        )}
 
             <div className="product-modal__price">
             <span>Current bid</span>
