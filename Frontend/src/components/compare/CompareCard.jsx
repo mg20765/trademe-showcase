@@ -34,7 +34,7 @@ export default function CompareCard({ product, onRemove }) {
 
         <p className={styles.detail}>
           <span>Price: </span>
-          {product.price ? `$${product.price}` : "—"}
+          {product.price_nzd ? `$${product.price_nzd}` : "—"}
         </p>
 
         <p className={styles.detail}>
