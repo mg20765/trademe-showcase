@@ -1,8 +1,5 @@
 import express from "express";
-import {
-  getChairs,
-  getBookshelves,
-} from "../controllers/categoryController.js";
+import { getChairs, getBookshelves } from "../controllers/categoryController.js";
 
 const router = express.Router();
 
