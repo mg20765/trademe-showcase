@@ -1,5 +1,8 @@
 import styles from "./ListingInfo.module.css";
 
+import CompareButton from "../../../components/ui/SharedComponents/CompareButton-sml.jsx";
+import WatchlistButton from "../../../components/ui/SharedComponents/WatchlistButton.jsx";
+
 export default function ListingInfo({ listing, onCompare, onPlaceBid }) {
   return (
     <section className={styles.container}>
@@ -10,8 +13,8 @@ export default function ListingInfo({ listing, onCompare, onPlaceBid }) {
           <h1>{listing.title}</h1>
 
           <div className={styles.actions}>
-            <button>❤ Watchlist</button>
-            <button onClick={onCompare}>⇄ Compare</button>
+            <WatchlistButton showBackground={false} />
+            <CompareButton onClick={onCompare} showBackground={false} />
           </div>
         </div>
 
