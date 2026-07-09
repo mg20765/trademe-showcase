@@ -48,9 +48,13 @@ export default function CompareCard({ product = {}, onRemove }) {
 
         <p className={styles.detail}>
           <span>Price: </span>
+<<<<<<< HEAD
           {typeof product.price === "number"
             ? currencyFormatter.format(product.price)
             : "—"}
+=======
+          {product.price_nzd ? `$${product.price_nzd}` : "—"}
+>>>>>>> 80f0f0001a4d766d5a6e62afeb2797cad763a847
         </p>
 
         <p className={styles.detail}>

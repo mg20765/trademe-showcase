@@ -4,23 +4,14 @@
 // - Managing comparison items
 // - Removing items from the list
 
-import { useState } from "react";
-import ComparePopupIcon from "./ComparePopUpIcon";
+import ComparePopupIcon from "./ComparePopupIcon";
 import DoubleArrow from "../../../../assets/DoubleArrow.svg";
 import styles from "./ComparePopUp.module.css";
-
-import mockCompareItems from "./mockCompareItems";
+import { useCompare } from "../../../Context/CompareContext.jsx";
 
 export default function ComparePopUp() {
-  const [showCompare, setShowCompare] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  // Temporary mock data until backend is connected
-  const [compareItems, setCompareItems] = useState(mockCompareItems);
-
-  const removeItem = (id) => {
-    setCompareItems((items) => items.filter((item) => item.id !== id));
-  };
+  // 🔄 Pull global tracking state directly out of your global context hook
+  const { compareItems, sidebarOpen, setSidebarOpen, removeItem } = useCompare();
 
   return (
     <div className={styles.container}>
@@ -39,12 +30,12 @@ export default function ComparePopUp() {
 
         <div className={styles.list}>
           {compareItems.map((item) => (
-            <div key={item.id} className={styles.listItem}>
+            <div key={item.item_num} className={styles.listItem}>
               <span>
-                {item.title}, {item.seller}
+                {item.title} {item.seller ? `by ${item.seller}` : ""}
               </span>
 
-              <button className={styles.removeButton} onClick={() => removeItem(item.id)}>
+              <button className={styles.removeButton} onClick={() => removeItem(item.item_num)}>
                 ✕
               </button>
             </div>
