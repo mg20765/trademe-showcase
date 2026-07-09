@@ -30,7 +30,21 @@ export default function BidConfirmationModal({ bidAmount, onCancel, onConfirm })
         </label>
 
         <div className={styles.buttonRow}>
-          <PlaceBidButton className={styles.placeBidButton} disabled={!accepted} onClick={onConfirm} style={{ backgroundColor: "#2878d8" }} />
+          <PlaceBidButton
+            className={styles.placeBidButton}
+            disabled={!accepted}
+            onClick={onConfirm}
+            /* Pass inline overrides dynamically based on the 'accepted' state */
+            style={
+              !accepted
+                ? {
+                    backgroundColor: "#c7c7c7",
+                    color: "#777",
+                    cursor: "not-allowed",
+                  }
+                : { backgroundColor: "#2878d8" }
+            }
+          />
 
           <button className={styles.cancelButton} onClick={onCancel}>
             Cancel
