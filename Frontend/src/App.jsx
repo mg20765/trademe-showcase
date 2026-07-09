@@ -7,12 +7,14 @@ import PlaceBidPage from "./pages/PlaceBidPage";
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/category" element={<CategoryPage />} />
-      <Route path="/compare" element={<ComparePage />} />
-      <Route path="/place-bid/:id" element={<PlaceBidPage />} />
-      <Route path="/listing/:id" element={<ListingPage />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/category" element={<CategoryPage />} />
+        <Route path="/compare" element={<ComparePage />} />
+        <Route path="/place-bid/:id" element={<PlaceBidPage />} />
+        <Route path="/listing/:id" element={<ListingPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
