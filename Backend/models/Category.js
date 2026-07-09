@@ -13,8 +13,4 @@ const listingSchema = new mongoose.Schema(
 );
 
 export const Chair = mongoose.model("Chair", listingSchema, "chairs");
-export const Bookshelf = mongoose.model(
-  "Bookshelf",
-  listingSchema,
-  "bookshelves",
-);
+export const Bookshelf = mongoose.model("Bookshelf", listingSchema, "bookshelves");
