@@ -11,8 +11,7 @@ export default function BidModal({ listing, bidAmount, setBidAmount, onClose, on
 
         <h2>Place a Bid</h2>
 
-        <div className={styles.imagePlaceholder}></div>
-
+        <img src={listing.images?.[0] || "/placeholder.jpg"} alt={listing.title} className={styles.listingImage} />
         <p className={styles.subtitle}>
           Current bid:{" "}
           <strong>
