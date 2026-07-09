@@ -13,7 +13,7 @@ const CATEGORIES = [
 ];
 
 // Change this to your actual API location
-const API_URL = "http://localhost:3001/api/listings";
+const API_URL = "http://localhost:5001/api/listings";
 
 export default function CategoryPage() {
   const [items, setItems] = useState([]);

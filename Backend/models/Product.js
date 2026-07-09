@@ -25,12 +25,51 @@ const productSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    image: {
-      type: String,
-      required: true,
+    images: {
+      type: [String],
+      default: [],
     },
-  },
 
+    seller: String,
+
+    listedDate: String,
+
+    closingDate: String,
+
+    buyNow: Number,
+
+    currentBid: Number,
+
+    category: String,
+
+    details: [
+      {
+        label: String,
+        value: String,
+      },
+    ],
+
+    summary: [String],
+
+    questions: [
+      {
+        question: String,
+        answer: String,
+        askedBy: String,
+        date: String,
+      },
+    ],
+
+    similarListings: [
+      {
+        item_num: Number,
+        title: String,
+        price_nzd: Number,
+        location: String,
+        images: [String],
+      },
+    ],
+  },
   {
     //  Adds createdAt and updatedAt fields to the schema
     timestamps: true,
