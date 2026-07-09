@@ -1,4 +1,4 @@
-export default function PlaceBidButton({ onClick, style, disabled }) {
+export default function PlaceBidButton({ onClick, style, disabled, className }) {
   return (
     <button
       onClick={onClick}
