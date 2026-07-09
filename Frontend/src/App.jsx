@@ -1,5 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import ListingPage from "./pages/ListingPage/ListingPage";
 import ComparePage from "./pages/ComparePage";
@@ -10,9 +10,9 @@ export default function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/category" element={<CategoryPage />} />
-      <Route path="/listing/:id" element={<ListingPage />} />
       <Route path="/compare" element={<ComparePage />} />
       <Route path="/place-bid/:id" element={<PlaceBidPage />} />
+      <Route path="/listing/:id" element={<ListingPage />} />
     </Routes>
   );
 }

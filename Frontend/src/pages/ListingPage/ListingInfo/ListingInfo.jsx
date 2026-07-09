@@ -1,6 +1,6 @@
 import styles from "./ListingInfo.module.css";
 
-export default function ListingInfo({ listing, onCompare }) {
+export default function ListingInfo({ listing, onCompare, onPlaceBid }) {
   return (
     <section className={styles.container}>
       {/* === Header === */}
@@ -36,7 +36,9 @@ export default function ListingInfo({ listing, onCompare }) {
               currency: "NZD",
             })}
           </h2>{" "}
-          <button className={styles.bidButton}>Place Bid</button>
+          <button className={styles.bidButton} onClick={onPlaceBid}>
+            Place Bid
+          </button>
         </div>
 
         <div className={styles.priceCard}>
@@ -47,7 +49,6 @@ export default function ListingInfo({ listing, onCompare }) {
               currency: "NZD",
             })}
           </h2>
-
           <button className={styles.buyButton}>Buy Now</button>
         </div>
       </div>
