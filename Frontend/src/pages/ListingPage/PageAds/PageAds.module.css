@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  height: 270px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h6 {
+  padding-left: 2%;
+  align-self: flex-start; /* Pushes the header back to the left corner */
+  margin-bottom: 1rem; /* Adds space below the header */
+}

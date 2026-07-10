@@ -1,204 +1,718 @@
 {
   "listings": [
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd123"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd123" },
       "item_num": 1,
       "title": "Elegant Low Bookshelf",
       "condition": "New",
       "location": "Auckland City",
-      "price_nzd": 25.99
+      "price_nzd": 25.99,
+      "images": [
+        "https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_02_619788f6-3455-453e-a57a-c395435d4897.jpg?v=1764583638&width=2040",
+        "https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_01_0151e544-0c42-4651-a9d3-f5c802b337ab.jpg?v=1764583638&width=2040",
+        "https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Product-Dimension_Square_01_e5d2abc8-41b6-42ed-8c8c-c54e9778464a.jpg?v=1764583638&width=2040",
+        "https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_Deepetch_01_24a2254e-e051-4646-8352-28076b8db78e.jpg?v=1764583638&width=2040"
+      ],
+      "seller": "JohnHalo17",
+      "listedDate": "01 Jul 2026",
+      "closingDate": "15 Jul 2026",
+      "buyNow": 25.99,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Material", "value": "MDF Wood" },
+        { "label": "Finish", "value": "Matte Veneer" },
+        { "label": "Colour", "value": "Natural Oak" },
+        { "label": "Weight", "value": "4.5kg" },
+        { "label": "Dimensions", "value": "60cm x 30cm x 45cm" }
+      ],
+      "summary": ["Compact design perfect for small spaces", "Easy assembly required"],
+      "questions": [
+        {
+          "question": "Does this come flat packed?",
+          "answer": "Yes, it comes flat packed with all tools needed for assembly.",
+          "askedBy": "KiwiBuyer99",
+          "date": "2026-07-02"
+        }
+      ],
+      "similarListings": [
+        { "item_num": 2, "title": "NEW Elegant Bookshelf Bookcase", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T04610_Low_05.jpg?v=1774434779&width=1200"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 3, "title": "Corner Shelf Local Clearance", "price_nzd": 25.99, "location": "Christchurch", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03794_LowRes_01_64062e2d-63b3-4c08-9240-88dfde0e8e69.jpg?v=1764583646&width=1024"] },
+        { "item_num": 6, "title": "3 Tier Bookshelf Clearance", "price_nzd": 32.99, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/272e7900-e6f4-41d8-8c79-9cb426a0ef9a/42633327-1?io=transform:fit,width:1920,height:2400&quality=90"] },
+        { "item_num": 8, "title": "Standard 3 Tier Book Shelf", "price_nzd": 37.0, "location": "Auckland City", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw6a7da9ba/36/92/W2354747_30.jpg?sw=484&sh=484&sm=fit"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd124"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd124" },
       "item_num": 2,
       "title": "NEW Elegant Bookshelf Bookcase",
       "condition": "New",
       "location": "Auckland City",
-      "price_nzd": 25.99
+      "price_nzd": 25.99,
+      "images": [
+        "https://www.mocka.co.nz/cdn/shop/files/T04610_Low_05.jpg?v=1774434779&width=1200",
+        "https://www.mocka.co.nz/cdn/shop/files/T04610_Product_Dimension_Square_01.jpg?v=1774434779&width=1200",
+        "https://www.mocka.co.nz/cdn/shop/files/T04610_Deepetch_Lores_01.jpg?v=1774434779&width=1200"
+      ],
+      "seller": "FurnitureZone_AKL",
+      "listedDate": "01 Jul 2026",
+      "closingDate": "15 Jul 2026",
+      "buyNow": 279.99,
+      "currentBid": 25.99,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Material", "value": "Particle Board" },
+        { "label": "Colour", "value": "Oak" },
+        { "label": "Finish", "value": "Wood Grain Veneer" },
+        { "label": "Weight", "value": "6.0kg" },
+        { "label": "Dimensions", "value": "170cm x 35cm x 110cm" }
+      ],
+      "summary": ["Modern multi-tier look", "Sturdy base"],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 1, "title": "Elegant Low Bookshelf", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_02_619788f6-3455-453e-a57a-c395435d4897.jpg?v=1764583638&width=2040"] },
+        { "item_num": 8, "title": "Standard 3 Tier Book Shelf", "price_nzd": 37.0, "location": "Auckland City", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw6a7da9ba/36/92/W2354747_30.jpg?sw=484&sh=484&sm=fit"] },
+        { "item_num": 10, "title": "Wooden-look Bookshelf", "price_nzd": 40.0, "location": "Auckland City", "images": ["https://www.treasurebox.co.nz/cdn/shop/files/1768461439_2c3e613e-62d4-4a55-94f7-90485786b623.jpg?v=1768461621&width=1400"] },
+        { "item_num": 18, "title": "Vasagle 5-Tier Tall Bookcase", "price_nzd": 69.0, "location": "Auckland City", "images": ["https://assets.kogan.com/images/mightyape/MPE-35882024/1-0d3b2d32e5-269694473.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 6, "title": "3 Tier Bookshelf Clearance", "price_nzd": 32.99, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/272e7900-e6f4-41d8-8c79-9cb426a0ef9a/42633327-1?io=transform:fit,width:1920,height:2400&quality=90"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd125"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd125" },
       "item_num": 3,
       "title": "Corner Shelf Local Clearance",
       "condition": "New",
       "location": "Christchurch",
-      "price_nzd": 25.99
+      "price_nzd": 25.99,
+      "images": [
+        "https://www.mocka.co.nz/cdn/shop/files/T03794_LowRes_01_64062e2d-63b3-4c08-9240-88dfde0e8e69.jpg?v=1764583646&width=1024",
+        "https://www.mocka.co.nz/cdn/shop/files/T03794-product-dimension_Square_01_3931843e-40ac-4afb-8342-5ea32961b5d3.jpg?v=1764583646&width=1200",
+        "https://www.mocka.co.nz/cdn/shop/files/T03794_LowRes_Deepetch_01_08d8d182-1b79-4ef7-87d4-608b213f2c2f.jpg?v=1764583646&width=1200"
+      ],
+      "seller": "CHCH_Clearance",
+      "listedDate": "28 Jun 2026",
+      "closingDate": "12 Jul 2026",
+      "buyNow": 25.99,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Type", "value": "Corner Unit" },
+        { "label": "Tiers", "value": "3" },
+        { "label": "Colour", "value": "Natural Bamboo" },
+        { "label": "Finish", "value": "Clear Gloss" },
+        { "label": "Weight", "value": "9kg" }
+      ],
+      "summary": ["Space-saving design", "Local pickup available from Wigram"],
+      "questions": [
+        {
+          "question": "Can I pick this up during the weekend?",
+          "answer": "Yes, our warehouse is open 9 AM - 1 PM on Saturdays.",
+          "askedBy": "CantyGal",
+          "date": "2026-06-29"
+        }
+      ],
+      "similarListings": [
+        { "item_num": 5, "title": "Wall Mounted Hanging Case", "price_nzd": 29.95, "location": "Christchurch", "images": ["https://minime.co.nz/cdn/shop/products/O1CN01V6xL4x1gte63cD5rX__2938724200_1024x1024.jpg?v=1636164158"] },
+        { "item_num": 19, "title": "Corner Shelf Bookcase 30cm", "price_nzd": 75.0, "location": "Manukau", "images": ["https://assets.kogan.com/images/mightyape/MPE-35203380/1-717daca146-253281510.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 20, "title": "Corner Shelf Bookcase 40cm", "price_nzd": 75.0, "location": "Manukau", "images": ["https://assets.kogan.com/images/mightyape/MPE-40501732/1-6024aa3491-327514233.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 1, "title": "Elegant Low Bookshelf", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_02_619788f6-3455-453e-a57a-c395435d4897.jpg?v=1764583638&width=2040"] },
+        { "item_num": 2, "title": "NEW Elegant Bookshelf Bookcase", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T04610_Low_05.jpg?v=1774434779&width=1200"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd126"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd126" },
       "item_num": 4,
       "title": "White Bookshelf Unit",
       "condition": "Used",
       "location": "North Shore",
-      "price_nzd": 25
+      "price_nzd": 15.0,
+      "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90", "https://assets.kmart.com.au/transform/f11307fd-0c04-433f-b46d-679994836d46/42633945-3?io=transform:fit,width:2048,height:2560&quality=90"],
+      "seller": "DaveS85",
+      "listedDate": "03 Jul 2026",
+      "closingDate": "10 Jul 2026",
+      "buyNow": 59.0,
+      "currentBid": 39.0,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "Used (Good)" },
+        { "label": "Condition details", "value": "Minor scuffs on bottom shelf" },
+        { "label": "Brand", "value": "IKEA Target" },
+        { "label": "Colour", "value": "White" },
+        { "label": "Finish", "value": "Laminate" },
+        { "label": "Weight", "value": "15.5kg" }
+      ],
+      "summary": ["Pre-loved white shelving unit", "Must collect before Friday"],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 6, "title": "3 Tier Bookshelf Clearance", "price_nzd": 32.99, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/272e7900-e6f4-41d8-8c79-9cb426a0ef9a/42633327-1?io=transform:fit,width:1920,height:2400&quality=90"] },
+        { "item_num": 11, "title": "Bookshelf Display Shelf", "price_nzd": 44.99, "location": "North Shore", "images": ["https://buykiwi.co.nz/cdn/shop/files/TR9151-web9_TOAMQ265V29C.jpg?v=1780178335"] },
+        { "item_num": 16, "title": "Storage Wall Shelf", "price_nzd": 55.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-38513023/1-3e020e721f-312051608.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 17, "title": "8 Tier White Bookshelf", "price_nzd": 65.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 9, "title": "Basic White Book Shelf", "price_nzd": 39.0, "location": "Manukau", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw386846da/5f/a6/W2354753_30.jpg?sw=484&sh=484&sm=fit"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd127"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd127" },
       "item_num": 5,
       "title": "Wall Mounted Hanging Case",
       "condition": "New",
       "location": "Christchurch",
-      "price_nzd": 29.95
+      "price_nzd": 29.95,
+      "images": ["https://minime.co.nz/cdn/shop/products/O1CN01V6xL4x1gte63cD5rX__2938724200_1024x1024.jpg?v=1636164158"],
+      "seller": "CHCH_Clearance",
+      "listedDate": "04 Jul 2026",
+      "closingDate": "18 Jul 2026",
+      "buyNow": 29.95,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Mounting Type", "value": "Wall Screws Included" },
+        { "label": "Max Weight Capacity", "value": "10kg" },
+        { "label": "Colour", "value": "Charcoal Black" },
+        { "label": "Finish", "value": "Powder Coated" },
+        { "label": "Weight", "value": "2.1kg" }
+      ],
+      "summary": ["Floating aesthetic", "Hardware included for standard drywall mounting"],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 3, "title": "Corner Shelf Local Clearance", "price_nzd": 25.99, "location": "Christchurch", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03794_LowRes_01_64062e2d-63b3-4c08-9240-88dfde0e8e69.jpg?v=1764583646&width=1024"] },
+        { "item_num": 16, "title": "Storage Wall Shelf", "price_nzd": 55.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-38513023/1-3e020e721f-312051608.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 12, "title": "Geometric Design Metal Bookcase", "price_nzd": 48.68, "location": "International", "images": ["https://img-1.kwcdn.com/product/fancy/ebde0290-f6fe-49d4-a2ae-fa8155c86104.jpg?imageView2/2/w/800/q/70/format/avif"] },
+        { "item_num": 7, "title": "Metal Black Geometric Bookend", "price_nzd": 33.71, "location": "International", "images": ["https://m.media-amazon.com/images/I/61AFn4FxIPL._AC_SX679_.jpg"] },
+        { "item_num": 1, "title": "Elegant Low Bookshelf", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_02_619788f6-3455-453e-a57a-c395435d4897.jpg?v=1764583638&width=2040"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd128"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd128" },
       "item_num": 6,
       "title": "3 Tier Bookshelf Clearance",
       "condition": "New",
       "location": "North Shore",
-      "price_nzd": 32.99
+      "price_nzd": 32.99,
+      "images": ["https://assets.kmart.com.au/transform/272e7900-e6f4-41d8-8c79-9cb426a0ef9a/42633327-1?io=transform:fit,width:1920,height:2400&quality=90", "https://assets.kmart.com.au/transform/640efcde-aab8-46d9-8022-2e6689e58586/42633327-4?io=transform:fit,width:1920,height:2400&quality=90"],
+      "seller": "Shore_Imports",
+      "listedDate": "02 Jul 2026",
+      "closingDate": "16 Jul 2026",
+      "buyNow": 35.0,
+      "currentBid": 32.99,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Height", "value": "90cm" },
+        { "label": "Width", "value": "40cm" },
+        { "label": "Colour", "value": "Light Oak" },
+        { "label": "Finish", "value": "Water-resistant Veneer" },
+        { "label": "Weight", "value": "7.3kg" }
+      ],
+      "summary": ["Overstock clearance item", "Water-resistant finish"],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 11, "title": "Bookshelf Display Shelf", "price_nzd": 44.99, "location": "North Shore", "images": ["https://buykiwi.co.nz/cdn/shop/files/TR9151-web9_TOAMQ265V29C.jpg?v=1780178335"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 16, "title": "Storage Wall Shelf", "price_nzd": 55.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-38513023/1-3e020e721f-312051608.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 17, "title": "8 Tier White Bookshelf", "price_nzd": 65.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 1, "title": "Elegant Low Bookshelf", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_02_619788f6-3455-453e-a57a-c395435d4897.jpg?v=1764583638&width=2040"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd129"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd129" },
       "item_num": 7,
       "title": "Metal Black Geometric Bookend",
       "condition": "New",
       "location": "International",
-      "price_nzd": 33.71
+      "price_nzd": 33.71,
+      "images": ["https://m.media-amazon.com/images/I/61AFn4FxIPL._AC_SX679_.jpg", "https://m.media-amazon.com/images/I/51IScCZskAL._AC_SX679_.jpg"],
+      "seller": "GlobalDesign_Store",
+      "listedDate": "05 Jul 2026",
+      "closingDate": "26 Jul 2026",
+      "buyNow": 33.71,
+      "currentBid": null,
+      "category": "Home & Living > Home Decor > Bookends",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Material", "value": "Heavy-duty Iron" },
+        { "label": "Style", "value": "Nordic Minimalist" },
+        { "label": "Colour", "value": "Satin Black" },
+        { "label": "Finish", "value": "Anodized Metal" },
+        { "label": "Weight", "value": "0.8kg" }
+      ],
+      "summary": ["Ships to NZ from international hub", "Allows heavy books to stand vertically without slipping"],
+      "questions": [
+        {
+          "question": "How long does shipping to NZ take?",
+          "answer": "Standard delivery takes between 10-14 working days.",
+          "askedBy": "Bookworm_nz",
+          "date": "2026-07-06"
+        }
+      ],
+      "similarListings": [
+        { "item_num": 12, "title": "Geometric Design Metal Bookcase", "price_nzd": 48.68, "location": "International", "images": ["https://img-1.kwcdn.com/product/fancy/ebde0290-f6fe-49d4-a2ae-fa8155c86104.jpg?imageView2/2/w/800/q/70/format/avif"] },
+        { "item_num": 5, "title": "Wall Mounted Hanging Case", "price_nzd": 29.95, "location": "Christchurch", "images": ["https://minime.co.nz/cdn/shop/products/O1CN01V6xL4x1gte63cD5rX__2938724200_1024x1024.jpg?v=1636164158"] },
+        { "item_num": 1, "title": "Elegant Low Bookshelf", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_02_619788f6-3455-453e-a57a-c395435d4897.jpg?v=1764583638&width=2040"] },
+        { "item_num": 3, "title": "Corner Shelf Local Clearance", "price_nzd": 25.99, "location": "Christchurch", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03794_LowRes_01_64062e2d-63b3-4c08-9240-88dfde0e8e69.jpg?v=1764583646&width=1024"] },
+        { "item_num": 6, "title": "3 Tier Bookshelf Clearance", "price_nzd": 32.99, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/272e7900-e6f4-41d8-8c79-9cb426a0ef9a/42633327-1?io=transform:fit,width:1920,height:2400&quality=90"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd12a"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd12a" },
       "item_num": 8,
       "title": "Standard 3 Tier Book Shelf",
       "condition": "New",
       "location": "Auckland City",
-      "price_nzd": 37
+      "price_nzd": 37.0,
+      "images": [
+        "https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw6a7da9ba/36/92/W2354747_30.jpg?sw=484&sh=484&sm=fit",
+        "https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw61965957/36/92/W2354747_32.jpg?sw=484&sh=484&sm=fit"
+      ],
+      "seller": "FurnitureZone_AKL",
+      "listedDate": "05 Jul 2026",
+      "closingDate": "19 Jul 2026",
+      "buyNow": 37.0,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Adjustable Shelves", "value": "Yes" },
+        { "label": "Colour", "value": "Wood Look" },
+        { "label": "Finish", "value": "Melamine Matte" },
+        { "label": "Weight", "value": "8.5kg" }
+      ],
+      "summary": ["Standard commercial grade office shelving unit"],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 1, "title": "Elegant Low Bookshelf", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_02_619788f6-3455-453e-a57a-c395435d4897.jpg?v=1764583638&width=2040"] },
+        { "item_num": 2, "title": "NEW Elegant Bookshelf Bookcase", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T04610_Low_05.jpg?v=1774434779&width=1200"] },
+        { "item_num": 10, "title": "Wooden-look Bookshelf", "price_nzd": 40.0, "location": "Auckland City", "images": ["https://www.treasurebox.co.nz/cdn/shop/files/1768461439_2c3e613e-62d4-4a55-94f7-90485786b623.jpg?v=1768461621&width=1400"] },
+        { "item_num": 18, "title": "Vasagle 5-Tier Tall Bookcase", "price_nzd": 69.0, "location": "Auckland City", "images": ["https://assets.kogan.com/images/mightyape/MPE-35882024/1-0d3b2d32e5-269694473.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 9, "title": "Basic White Book Shelf", "price_nzd": 39.0, "location": "Manukau", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw386846da/5f/a6/W2354753_30.jpg?sw=484&sh=484&sm=fit"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd12b"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd12b" },
       "item_num": 9,
       "title": "Basic White Book Shelf",
       "condition": "New",
       "location": "Manukau",
-      "price_nzd": 39
+      "price_nzd": 39.0,
+      "images": [
+        "https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw386846da/5f/a6/W2354753_30.jpg?sw=484&sh=484&sm=fit",
+        "https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dwe6a7472a/5f/a6/W2354753_32.jpg?sw=484&sh=484&sm=fit"
+      ],
+      "seller": "SouthAkl_Supplies",
+      "listedDate": "04 Jul 2026",
+      "closingDate": "18 Jul 2026",
+      "buyNow": 39.0,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Finish", "value": "Matte White" },
+        { "label": "Colour", "value": "Pure White" },
+        { "label": "Weight", "value": "5.0kg" }
+      ],
+      "summary": ["Simple utility shelf suitable for kids rooms or garages."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 19, "title": "Corner Shelf Bookcase 30cm", "price_nzd": 75.0, "location": "Manukau", "images": ["https://assets.kogan.com/images/mightyape/MPE-35203380/1-717daca146-253281510.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 20, "title": "Corner Shelf Bookcase 40cm", "price_nzd": 75.0, "location": "Manukau", "images": ["https://assets.kogan.com/images/mightyape/MPE-40501732/1-6024aa3491-327514233.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 8, "title": "Standard 3 Tier Book Shelf", "price_nzd": 37.0, "location": "Auckland City", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw6a7da9ba/36/92/W2354747_30.jpg?sw=484&sh=484&sm=fit"] },
+        { "item_num": 17, "title": "8 Tier White Bookshelf", "price_nzd": 65.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd12c"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd12c" },
       "item_num": 10,
       "title": "Wooden-look Bookshelf",
       "condition": "Used",
       "location": "Auckland City",
-      "price_nzd": 40
+      "price_nzd": 40.0,
+      "images": [
+        "https://www.treasurebox.co.nz/cdn/shop/files/1768461439_2c3e613e-62d4-4a55-94f7-90485786b623.jpg?v=1768461621&width=1400",
+        "https://www.treasurebox.co.nz/cdn/shop/files/1768461439_d8f144c0-f34c-4558-87e9-d2aa29404e37.jpg?v=1768461621&width=1400",
+        "https://www.treasurebox.co.nz/cdn/shop/files/new-lt10255-bulls-80cm-4-tier-bookshelf-rustic-brown-9-1-3b24fa91-ddc8-4a15-a16d-9dc7848a113d.jpg?v=1768461622&width=1400"
+      ],
+      "seller": "Sarah_J_90",
+      "listedDate": "07 Jul 2026",
+      "closingDate": "14 Jul 2026",
+      "buyNow": 45.0,
+      "currentBid": 40.0,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "Used (Good)" },
+        { "label": "Age", "value": "2 years" },
+        { "label": "Defects", "value": "None" },
+        { "label": "Colour", "value": "Walnut Brown" },
+        { "label": "Finish", "value": "Faux Wood Veneer" },
+        { "label": "Weight", "value": "9.1kg" }
+      ],
+      "summary": ["Moving overseas sales. Very robust wood laminate veneer look."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 18, "title": "Vasagle 5-Tier Tall Bookcase", "price_nzd": 69.0, "location": "Auckland City", "images": ["https://assets.kogan.com/images/mightyape/MPE-35882024/1-0d3b2d32e5-269694473.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 1, "title": "Elegant Low Bookshelf", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03974_LowRes_Square_02_619788f6-3455-453e-a57a-c395435d4897.jpg?v=1764583638&width=2040"] },
+        { "item_num": 2, "title": "NEW Elegant Bookshelf Bookcase", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T04610_Low_05.jpg?v=1774434779&width=1200"] },
+        { "item_num": 8, "title": "Standard 3 Tier Book Shelf", "price_nzd": 37.0, "location": "Auckland City", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw6a7da9ba/36/92/W2354747_30.jpg?sw=484&sh=484&sm=fit"] },
+        { "item_num": 14, "title": "Cambridge Rimu Bookcase", "price_nzd": 50.0, "location": "Waikato", "images": ["https://www.mocka.co.nz/cdn/shop/files/T04654_Low_06.jpg?v=1775730743&width=1200"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd12d"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd12d" },
       "item_num": 11,
       "title": "Bookshelf Display Shelf",
       "condition": "New",
       "location": "North Shore",
-      "price_nzd": 44.99
+      "price_nzd": 44.99,
+      "images": ["https://buykiwi.co.nz/cdn/shop/files/TR9151-web9_TOAMQ265V29C.jpg?v=1780178335", "https://buykiwi.co.nz/cdn/shop/files/LLS025B01V1_TR91519_T0WAH93YCR5Z.jpg?v=1780178335"],
+      "seller": "Shore_Imports",
+      "listedDate": "01 Jul 2026",
+      "closingDate": "15 Jul 2026",
+      "buyNow": 44.99,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Design", "value": "Open Back" },
+        { "label": "Colour", "value": "Espresso Dark Brown" },
+        { "label": "Finish", "value": "Satin Protect" },
+        { "label": "Weight", "value": "11.0kg" }
+      ],
+      "summary": ["Perfect combination of display partition and book keeper."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 6, "title": "3 Tier Bookshelf Clearance", "price_nzd": 32.99, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/272e7900-e6f4-41d8-8c79-9cb426a0ef9a/42633327-1?io=transform:fit,width:1920,height:2400&quality=90"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 16, "title": "Storage Wall Shelf", "price_nzd": 55.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-38513023/1-3e020e721f-312051608.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 17, "title": "8 Tier White Bookshelf", "price_nzd": 65.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 10, "title": "Wooden-look Bookshelf", "price_nzd": 40.0, "location": "Auckland City", "images": ["https://www.treasurebox.co.nz/cdn/shop/files/1768461439_2c3e613e-62d4-4a55-94f7-90485786b623.jpg?v=1768461621&width=1400"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd12e"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd12e" },
       "item_num": 12,
       "title": "Geometric Design Metal Bookcase",
       "condition": "New",
       "location": "International",
-      "price_nzd": 48.68
+      "price_nzd": 48.68,
+      "images": ["https://img-1.kwcdn.com/product/fancy/ebde0290-f6fe-49d4-a2ae-fa8155c86104.jpg?imageView2/2/w/800/q/70/format/avif"],
+      "seller": "GlobalDesign_Store",
+      "listedDate": "03 Jul 2026",
+      "closingDate": "24 Jul 2026",
+      "buyNow": 48.68,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Material", "value": "Alloy Steel" },
+        { "label": "Colour", "value": "Industrial Rust-Black" },
+        { "label": "Finish", "value": "Distressed Powder Coat" },
+        { "label": "Weight", "value": "6.8kg" }
+      ],
+      "summary": ["Asymmetrical avant-garde structural frame for creative book layouts."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 7, "title": "Metal Black Geometric Bookend", "price_nzd": 33.71, "location": "International", "images": ["https://m.media-amazon.com/images/I/61AFn4FxIPL._AC_SX679_.jpg"] },
+        { "item_num": 5, "title": "Wall Mounted Hanging Case", "price_nzd": 29.95, "location": "Christchurch", "images": ["https://minime.co.nz/cdn/shop/products/O1CN01V6xL4x1gte63cD5rX__2938724200_1024x1024.jpg?v=1636164158"] },
+        { "item_num": 18, "title": "Vasagle 5-Tier Tall Bookcase", "price_nzd": 69.0, "location": "Auckland City", "images": ["https://assets.kogan.com/images/mightyape/MPE-35882024/1-0d3b2d32e5-269694473.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 3, "title": "Corner Shelf Local Clearance", "price_nzd": 25.99, "location": "Christchurch", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03794_LowRes_01_64062e2d-63b3-4c08-9240-88dfde0e8e69.jpg?v=1764583646&width=1024"] },
+        { "item_num": 13, "title": "Poroti 5 Tier Storage Shelf", "price_nzd": 50.0, "location": "Papakura", "images": ["https://homemart.co.nz/cdn/shop/files/1779074888_dba381d7-cc09-4275-8a8e-fee9cc229631.jpg?v=1779075021&width=1400"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd12f"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd12f" },
       "item_num": 13,
       "title": "Poroti 5 Tier Storage Shelf",
       "condition": "New",
       "location": "Papakura",
-      "price_nzd": 50
+      "price_nzd": 50.0,
+      "images": ["https://homemart.co.nz/cdn/shop/files/1779074888_dba381d7-cc09-4275-8a8e-fee9cc229631.jpg?v=1779075021&width=1400", "https://homemart.co.nz/cdn/shop/files/new-lt10242-poroti-5-tier-bookshelf-storage-shelf-black-2-de1f05cc-1595-4903-9b9e-1d9ca0021d93.jpg?v=1779075025"],
+      "seller": "SouthWholesale",
+      "listedDate": "06 Jul 2026",
+      "closingDate": "20 Jul 2026",
+      "buyNow": 55.0,
+      "currentBid": 50.0,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Model", "value": "Poroti-V5" },
+        { "label": "Height", "value": "150cm" },
+        { "label": "Colour", "value": "Ash Grey" },
+        { "label": "Finish", "value": "Melamine Tough" },
+        { "label": "Weight", "value": "14.2kg" }
+      ],
+      "summary": ["Tall 5 tier multi-shelf optimal for dynamic organizing requirements."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 18, "title": "Vasagle 5-Tier Tall Bookcase", "price_nzd": 69.0, "location": "Auckland City", "images": ["https://assets.kogan.com/images/mightyape/MPE-35882024/1-0d3b2d32e5-269694473.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 17, "title": "8 Tier White Bookshelf", "price_nzd": 65.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 14, "title": "Cambridge Rimu Bookcase", "price_nzd": 50.0, "location": "Waikato", "images": ["https://www.mocka.co.nz/cdn/shop/files/T04654_Low_06.jpg?v=1775730743&width=1200"] },
+        { "item_num": 15, "title": "Max Rack Heavy Duty Unit", "price_nzd": 50.0, "location": "Bay of Plenty", "images": ["https://assets.kogan.com/images/mightyape/MPE-35587334/1-987a35faf5-260680335.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 10, "title": "Wooden-look Bookshelf", "price_nzd": 40.0, "location": "Auckland City", "images": ["https://www.treasurebox.co.nz/cdn/shop/files/1768461439_2c3e613e-62d4-4a55-94f7-90485786b623.jpg?v=1768461621&width=1400"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd130"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd130" },
       "item_num": 14,
       "title": "Cambridge Rimu Bookcase",
       "condition": "Used",
       "location": "Waikato",
-      "price_nzd": 50
+      "price_nzd": 50.0,
+      "images": [
+        "https://www.mocka.co.nz/cdn/shop/files/T04654_Low_06.jpg?v=1775730743&width=1200",
+        "https://www.mocka.co.nz/cdn/shop/files/T04654__Deepetch_Low_01.jpg?v=1775730743&width=1920",
+        "https://www.mocka.co.nz/cdn/shop/files/T04654_Product_Dimension_Square_01_71ab947f-3476-4532-a5c5-0800bab200fb.jpg?v=1782988921&width=1920"
+      ],
+      "seller": "HamiltonRetro",
+      "listedDate": "02 Jul 2026",
+      "closingDate": "09 Jul 2026",
+      "buyNow": 75.0,
+      "currentBid": 50.0,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "Used (Vintage)" },
+        { "label": "Wood Type", "value": "Solid NZ Rimu" },
+        { "label": "Era", "value": "Late 1990s" },
+        { "label": "Colour", "value": "Honey Amber Wood" },
+        { "label": "Finish", "value": "Beeswax Oil Polished" },
+        { "label": "Weight", "value": "22.0kg" }
+      ],
+      "summary": ["Genuine NZ native timber finish bookshelf. Heavy solid quality."],
+      "questions": [
+        {
+          "question": "Are shelves adjustable?",
+          "answer": "No, they are fixed in place.",
+          "askedBy": "VintageCollector",
+          "date": "2026-07-04"
+        }
+      ],
+      "similarListings": [
+        { "item_num": 10, "title": "Wooden-look Bookshelf", "price_nzd": 40.0, "location": "Auckland City", "images": ["https://www.treasurebox.co.nz/cdn/shop/files/1768461439_2c3e613e-62d4-4a55-94f7-90485786b623.jpg?v=1768461621&width=1400"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 15, "title": "Max Rack Heavy Duty Unit", "price_nzd": 50.0, "location": "Bay of Plenty", "images": ["https://assets.kogan.com/images/mightyape/MPE-35587334/1-987a35faf5-260680335.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 13, "title": "Poroti 5 Tier Storage Shelf", "price_nzd": 50.0, "location": "Papakura", "images": ["https://homemart.co.nz/cdn/shop/files/1779074888_dba381d7-cc09-4275-8a8e-fee9cc229631.jpg?v=1779075021&width=1400"] },
+        { "item_num": 18, "title": "Vasagle 5-Tier Tall Bookcase", "price_nzd": 69.0, "location": "Auckland City", "images": ["https://assets.kogan.com/images/mightyape/MPE-35882024/1-0d3b2d32e5-269694473.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd131"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd131" },
       "item_num": 15,
       "title": "Max Rack Heavy Duty Unit",
       "condition": "Used",
       "location": "Bay of Plenty",
-      "price_nzd": 50
+      "price_nzd": 50.0,
+      "images": [
+        "https://assets.kogan.com/images/mightyape/MPE-35587334/1-987a35faf5-260680335.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90",
+        "https://assets.kogan.com/images/mightyape/MPE-35587334/3-4e7df85ac8-260680342.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"
+      ],
+      "seller": "Tauranga_Tradie",
+      "listedDate": "05 Jul 2026",
+      "closingDate": "12 Jul 2026",
+      "buyNow": 50.0,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "Used (Fair)" },
+        { "label": "Frame", "value": "Galvanized Steel" },
+        { "label": "Use-case", "value": "Garage / Shed" },
+        { "label": "Colour", "value": "Silver Metallic" },
+        { "label": "Finish", "value": "Unfinished Zinc Coated" },
+        { "label": "Weight", "value": "18.5kg" }
+      ],
+      "summary": ["Industrial tier loading capacity per level. Minor rust dots but solid structure."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 13, "title": "Poroti 5 Tier Storage Shelf", "price_nzd": 50.0, "location": "Papakura", "images": ["https://homemart.co.nz/cdn/shop/files/1779074888_dba381d7-cc09-4275-8a8e-fee9cc229631.jpg?v=1779075021&width=1400"] },
+        { "item_num": 14, "title": "Cambridge Rimu Bookcase", "price_nzd": 50.0, "location": "Waikato", "images": ["https://www.mocka.co.nz/cdn/shop/files/T04654_Low_06.jpg?v=1775730743&width=1200"] },
+        { "item_num": 10, "title": "Wooden-look Bookshelf", "price_nzd": 40.0, "location": "Auckland City", "images": ["https://www.treasurebox.co.nz/cdn/shop/files/1768461439_2c3e613e-62d4-4a55-94f7-90485786b623.jpg?v=1768461621&width=1400"] },
+        { "item_num": 18, "title": "Vasagle 5-Tier Tall Bookcase", "price_nzd": 69.0, "location": "Auckland City", "images": ["https://assets.kogan.com/images/mightyape/MPE-35882024/1-0d3b2d32e5-269694473.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd132"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd132" },
       "item_num": 16,
       "title": "Storage Wall Shelf",
       "condition": "New",
       "location": "North Shore",
-      "price_nzd": 55
+      "price_nzd": 55.0,
+      "images": [
+        "https://assets.kogan.com/images/mightyape/MPE-38513023/1-3e020e721f-312051608.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90",
+        "https://assets.kogan.com/images/mightyape/MPE-38513023/6-c83c6a2eb5-312051568.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"
+      ],
+      "seller": "Shore_Imports",
+      "listedDate": "01 Jul 2026",
+      "closingDate": "15 Jul 2026",
+      "buyNow": 55.0,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Color", "value": "Black Walnut" },
+        { "label": "Colour", "value": "Dark Espresso" },
+        { "label": "Finish", "value": "Satin Varnish" },
+        { "label": "Weight", "value": "4.0kg" }
+      ],
+      "summary": ["Premium wall mount shelf piece with modern minimalist look."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 17, "title": "8 Tier White Bookshelf", "price_nzd": 65.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 11, "title": "Bookshelf Display Shelf", "price_nzd": 44.99, "location": "North Shore", "images": ["https://buykiwi.co.nz/cdn/shop/files/TR9151-web9_TOAMQ265V29C.jpg?v=1780178335"] },
+        { "item_num": 6, "title": "3 Tier Bookshelf Clearance", "price_nzd": 32.99, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/272e7900-e6f4-41d8-8c79-9cb426a0ef9a/42633327-1?io=transform:fit,width:1920,height:2400&quality=90"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 5, "title": "Wall Mounted Hanging Case", "price_nzd": 29.95, "location": "Christchurch", "images": ["https://minime.co.nz/cdn/shop/products/O1CN01V6xL4x1gte63cD5rX__2938724200_1024x1024.jpg?v=1636164158"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd133"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd133" },
       "item_num": 17,
       "title": "8 Tier White Bookshelf",
       "condition": "New",
       "location": "North Shore",
-      "price_nzd": 65
+      "price_nzd": 65.0,
+      "images": [
+        "https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90",
+        "https://assets.kogan.com/images/mightyape/MPE-36400178/3-78242447ac-276935822.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"
+      ],
+      "seller": "Shore_Imports",
+      "listedDate": "01 Jul 2026",
+      "closingDate": "15 Jul 2026",
+      "buyNow": 65.0,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Number of levels", "value": "8" },
+        { "label": "Height", "value": "180cm" },
+        { "label": "Colour", "value": "Nordic White" },
+        { "label": "Finish", "value": "Satin Protective Topcoat" },
+        { "label": "Weight", "value": "15.8kg" }
+      ],
+      "summary": ["Tall vertical tree-style bookshelf to display collections compactly."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 16, "title": "Storage Wall Shelf", "price_nzd": 55.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-38513023/1-3e020e721f-312051608.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 11, "title": "Bookshelf Display Shelf", "price_nzd": 44.99, "location": "North Shore", "images": ["https://buykiwi.co.nz/cdn/shop/files/TR9151-web9_TOAMQ265V29C.jpg?v=1780178335"] },
+        { "item_num": 6, "title": "3 Tier Bookshelf Clearance", "price_nzd": 32.99, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/272e7900-e6f4-41d8-8c79-9cb426a0ef9a/42633327-1?io=transform:fit,width:1920,height:2400&quality=90"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 9, "title": "Basic White Book Shelf", "price_nzd": 39.0, "location": "Manukau", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw386846da/5f/a6/W2354753_30.jpg?sw=484&sh=484&sm=fit"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd134"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd134" },
       "item_num": 18,
       "title": "Vasagle 5-Tier Tall Bookcase",
       "condition": "New",
       "location": "Auckland City",
-      "price_nzd": 69
+      "price_nzd": 69.0,
+      "images": [
+        "https://assets.kogan.com/images/mightyape/MPE-35882024/1-0d3b2d32e5-269694473.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90",
+        "https://assets.kogan.com/images/mightyape/MPE-35882024/3-0e49e45043-269694487.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90",
+        "https://assets.kogan.com/images/mightyape/MPE-35882024/7-cfbddbde5a-269694592.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"
+      ],
+      "seller": "FurnitureZone_AKL",
+      "listedDate": "07 Jul 2026",
+      "closingDate": "21 Jul 2026",
+      "buyNow": 79.0,
+      "currentBid": 69.0,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Brand", "value": "Vasagle" },
+        { "label": "Style", "value": "Industrial Rustic" },
+        { "label": "Colour", "value": "Rustic Brown / Black Frame" },
+        { "label": "Finish", "value": "Textured Veneer & Rigid Steel" },
+        { "label": "Weight", "value": "19.2kg" }
+      ],
+      "summary": ["Steel framework meets matte rustic brown boards for an authentic look."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 10, "title": "Wooden-look Bookshelf", "price_nzd": 40.0, "location": "Auckland City", "images": ["https://www.treasurebox.co.nz/cdn/shop/files/1768461439_2c3e613e-62d4-4a55-94f7-90485786b623.jpg?v=1768461621&width=1400"] },
+        { "item_num": 2, "title": "NEW Elegant Bookshelf Bookcase", "price_nzd": 25.99, "location": "Auckland City", "images": ["https://www.mocka.co.nz/cdn/shop/files/T04610_Low_05.jpg?v=1774434779&width=1200"] },
+        { "item_num": 8, "title": "Standard 3 Tier Book Shelf", "price_nzd": 37.0, "location": "Auckland City", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw6a7da9ba/36/92/W2354747_30.jpg?sw=484&sh=484&sm=fit"] },
+        { "item_num": 13, "title": "Poroti 5 Tier Storage Shelf", "price_nzd": 50.0, "location": "Papakura", "images": ["https://homemart.co.nz/cdn/shop/files/1779074888_dba381d7-cc09-4275-8a8e-fee9cc229631.jpg?v=1779075021&width=1400"] },
+        { "item_num": 12, "title": "Geometric Design Metal Bookcase", "price_nzd": 48.68, "location": "International", "images": ["https://img-1.kwcdn.com/product/fancy/ebde0290-f6fe-49d4-a2ae-fa8155c86104.jpg?imageView2/2/w/800/q/70/format/avif"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd135"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd135" },
       "item_num": 19,
       "title": "Corner Shelf Bookcase 30cm",
       "condition": "New",
       "location": "Manukau",
-      "price_nzd": 75
+      "price_nzd": 75.0,
+      "images": [
+        "https://assets.kogan.com/images/mightyape/MPE-35203380/1-717daca146-253281510.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90",
+        "https://assets.kogan.com/images/mightyape/MPE-35203380/4-822aa78f22-316474861.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"
+      ],
+      "seller": "SouthAkl_Supplies",
+      "listedDate": "06 Jul 2026",
+      "closingDate": "20 Jul 2026",
+      "buyNow": 75.0,
+      "currentBid": null,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Radius", "value": "30cm" },
+        { "label": "Colour", "value": "Soft Cream White" },
+        { "label": "Finish", "value": "High Durability Enamel" },
+        { "label": "Weight", "value": "8.0kg" }
+      ],
+      "summary": ["Specially tailored arc corners preventing collision impacts. Kid friendly."],
+      "questions": [],
+      "similarListings": [
+        { "item_num": 20, "title": "Corner Shelf Bookcase 40cm", "price_nzd": 75.0, "location": "Manukau", "images": ["https://assets.kogan.com/images/mightyape/MPE-40501732/1-6024aa3491-327514233.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 9, "title": "Basic White Book Shelf", "price_nzd": 39.0, "location": "Manukau", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw386846da/5f/a6/W2354753_30.jpg?sw=484&sh=484&sm=fit"] },
+        { "item_num": 3, "title": "Corner Shelf Local Clearance", "price_nzd": 25.99, "location": "Christchurch", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03794_LowRes_01_64062e2d-63b3-4c08-9240-88dfde0e8e69.jpg?v=1764583646&width=1024"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 17, "title": "8 Tier White Bookshelf", "price_nzd": 65.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] }
+      ]
     },
     {
-      "_id": {
-        "$oid": "6a423df859a83e8f448dd136"
-      },
+      "_id": { "$oid": "6a423df859a83e8f448dd136" },
       "item_num": 20,
       "title": "Corner Shelf Bookcase 40cm",
       "condition": "New",
       "location": "Manukau",
-      "price_nzd": 75
+      "price_nzd": 75.0,
+      "images": [
+        "https://assets.kogan.com/images/mightyape/MPE-40501732/1-6024aa3491-327514233.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90",
+        "https://assets.kogan.com/images/mightyape/MPE-40501732/3-2d4b396317-327514238.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90",
+        "https://assets.kogan.com/images/mightyape/MPE-40501732/2-d2c96e262f-327514253.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"
+      ],
+      "seller": "SouthAkl_Supplies",
+      "listedDate": "06 Jul 2026",
+      "closingDate": "20 Jul 2026",
+      "buyNow": 85.0,
+      "currentBid": 75.0,
+      "category": "Home & Living > Furniture > Shelves",
+      "details": [
+        { "label": "Condition", "value": "New" },
+        { "label": "Radius", "value": "40cm" },
+        { "label": "Colour", "value": "Soft Cream White" },
+        { "label": "Finish", "value": "High Durability Enamel" },
+        { "label": "Weight", "value": "10.5kg" }
+      ],
+      "summary": ["Slightly deeper 40cm variant of our standard arc corner shelving unit."],
+      "questions": [
+        {
+          "question": "Is it completely free standing?",
+          "answer": "Yes, but it includes wall anchoring brackets for extra safety.",
+          "askedBy": "SafetyFirstMom",
+          "date": "2026-07-07"
+        }
+      ],
+      "similarListings": [
+        { "item_num": 19, "title": "Corner Shelf Bookcase 30cm", "price_nzd": 75.0, "location": "Manukau", "images": ["https://assets.kogan.com/images/mightyape/MPE-35203380/1-717daca146-253281510.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] },
+        { "item_num": 9, "title": "Basic White Book Shelf", "price_nzd": 39.0, "location": "Manukau", "images": ["https://www.warehousestationery.co.nz/dw/image/v2/AAWO_PRD/on/demandware.static/-/Sites-wsl-master-catalog/default/dw386846da/5f/a6/W2354753_30.jpg?sw=484&sh=484&sm=fit"] },
+        { "item_num": 3, "title": "Corner Shelf Local Clearance", "price_nzd": 25.99, "location": "Christchurch", "images": ["https://www.mocka.co.nz/cdn/shop/files/T03794_LowRes_01_64062e2d-63b3-4c08-9240-88dfde0e8e69.jpg?v=1764583646&width=1024"] },
+        { "item_num": 4, "title": "White Bookshelf Unit", "price_nzd": 15.0, "location": "North Shore", "images": ["https://assets.kmart.com.au/transform/c791433f-67e7-4520-b6a3-d736449d2127/42633945-1?io=transform:fit,width:2048,height:2560&quality=90"] },
+        { "item_num": 17, "title": "8 Tier White Bookshelf", "price_nzd": 65.0, "location": "North Shore", "images": ["https://assets.kogan.com/images/mightyape/MPE-36400178/1-5c50b05522-276935815.jpeg?width=1200&height=800&auto=webp&bg-color=fff&canvas=1200%2C800&fit=bounds&quality=90"] }
+      ]
     }
   ]
 }
