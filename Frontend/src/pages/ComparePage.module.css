@@ -63,3 +63,20 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .breadcrumb {
+    font-size: 11px;
+  }
+
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
