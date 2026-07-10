@@ -1,8 +1,12 @@
 import { useState } from "react";
 import styles from "./BidConfirmationModal.module.css";
-import PlaceBidButton from "../PlaceBidButton";
+import PlaceBidModal from "../PlaceBidModal/PlaceBidModal.jsx";
 
-export default function BidConfirmationModal({ bidAmount, onCancel, onConfirm }) {
+export default function BidConfirmationModal({
+  bidAmount,
+  onCancel,
+  onConfirm,
+}) {
   const [accepted, setAccepted] = useState(false);
 
   return (
@@ -24,12 +28,26 @@ export default function BidConfirmationModal({ bidAmount, onCancel, onConfirm })
         </div>
 
         <label className={styles.checkboxRow}>
-          <input type="checkbox" checked={accepted} onChange={(e) => setAccepted(e.target.checked)} />
+          <input
+            type="checkbox"
+            checked={accepted}
+            onChange={(e) => setAccepted(e.target.checked)}
+          />
 
-          <span>I have read and accept the Terms & Conditions and understand that my bid is legally binding if successful.</span>
+          <span>
+            I have read and accept the Terms & Conditions and understand that my
+            bid is legally binding if successful.
+          </span>
         </label>
 
         <div className={styles.buttonRow}>
+<<<<<<< HEAD
+          <PlaceBidModal
+            className={styles.placeBidButton}
+            disabled={!accepted}
+            onClick={onConfirm}
+            style={{ backgroundColor: "#2878d8" }}
+=======
           <PlaceBidButton
             className={styles.placeBidButton}
             disabled={!accepted}
@@ -44,6 +62,7 @@ export default function BidConfirmationModal({ bidAmount, onCancel, onConfirm })
                   }
                 : { backgroundColor: "#2878d8" }
             }
+>>>>>>> 80f0f0001a4d766d5a6e62afeb2797cad763a847
           />
 
           <button className={styles.cancelButton} onClick={onCancel}>

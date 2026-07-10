@@ -5,6 +5,7 @@
 import React, { memo, useCallback, useMemo } from "react";
 import WatchlistButton from "./WatchlistButton.jsx";
 import WatchlistCheckIcon from "./WatchlistCheckIcon.jsx";
+import "./CategoryCard.css";
 
 const CategoryCard = memo(({ item, isWatchlisted, onToggleWatchlist }) => {
   // Safety check to prevent crashes if item is missing
@@ -45,15 +46,23 @@ const CategoryCard = memo(({ item, isWatchlisted, onToggleWatchlist }) => {
 
       {/* Image or Placeholder Logic */}
       <div className="card-placeholder">
-        <span
-          className="placeholder-icon"
-          role="img"
-          aria-label="Product placeholder"
-        >
-          🥝
-        </span>
+        {item.imageUrl ? (
+          <img
+            src={item.imageUrl}
+            alt={item.title}
+            className="card-image"
+            onError={(e) => {
+              e.target.style.display = "none";
+            }}
+          />
+        ) : (
+          <span
+            className="placeholder-icon"
+            role="img"
+            aria-label="Product placeholder"
+          ></span>
+        )}
       </div>
-
       <div
         className={`watchlist-button-top-anchor ${isWatchlisted ? "active" : ""}`}
       >

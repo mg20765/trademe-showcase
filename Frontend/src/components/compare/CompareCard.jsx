@@ -66,6 +66,9 @@ export default function CompareCard({ product, onRemove }) {
         <p className={styles.detail}>
           <span>Price: </span>
           {product.price_nzd ? `$${product.price_nzd}` : "—"}
+          {typeof product.price === "number"
+            ? currencyFormatter.format(product.price)
+            : "—"}
         </p>
 
         <p className={styles.detail}>
@@ -78,7 +81,7 @@ export default function CompareCard({ product, onRemove }) {
           {product.specs || "—"}
         </p>
 
-        {/* Place Bid button */}
+        {/* 2. Render a normal button in the footer to trigger the modal */}
         <div className={styles.footer}>
           <PlaceBidButton onClick={() => setShowModal(true)} />
         </div>

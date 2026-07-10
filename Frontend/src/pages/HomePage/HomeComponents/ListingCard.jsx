@@ -5,15 +5,17 @@ import "./listingCard.css";
 function ListingCard({ listing, isWatched, onToggleWatchlist, onOpenDetails }) {
     const price = listing.price_nzd || listing.price || listing.start_price || 0;
 
+    const imageUrl = listing.image || listing.images?.[0];
+
     return (
         // Main product card. Clicking anywhere opens the product details.
     <article className="listing-card" onClick={() => onOpenDetails(listing)}>
         <div className="listing-card__image-area">
-        {listing.image ? (
-            <img src={listing.image} alt={listing.title} />
-        ) : (
-            <div className="listing-card__placeholder">Image coming soon</div>
-        )}
+        {imageUrl ? (
+  <img src={imageUrl} alt={listing.title} />
+) : (
+  <div className="listing-card__placeholder">Image coming soon</div>
+)}
 
         <button
             className={`listing-card__watch ${isWatched ? "active" : ""}`}
