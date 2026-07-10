@@ -37,9 +37,10 @@
 .carousel {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
   overflow-x: auto;
-  padding-bottom: 1rem;
+  padding: 2rem;
 }
 
 .addButtonWrapper {
@@ -61,4 +62,21 @@
   color: #0a6bc4;
   cursor: pointer;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .breadcrumb {
+    font-size: 11px;
+  }
+
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }

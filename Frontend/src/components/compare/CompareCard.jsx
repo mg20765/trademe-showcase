@@ -1,45 +1,62 @@
 import { useState } from "react";
-import WatchlistHeart from "../ui/SharedComponents/WatchlistHeart";
-import PlaceBidModal from "../ui/SharedComponents/PlaceBidModal/PlaceBidModal";
+import WatchlistButton from "../ui/SharedComponents/WatchlistButton";
+import PlaceBidButton from "../ui/SharedComponents/PlaceBidButton";
+import BidModal from "../ui/SharedComponents/PlaceBidModal/PlaceBidModal";
 import styles from "./CompareCard.module.css";
 
-export default function CompareCard({ product = {}, onRemove }) {
-  // 1. Create a state to track if the modal is open
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // Formatter for currency
-  const currencyFormatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  });
+export default function CompareCard({ product, onRemove }) {
+  const [expanded, setExpanded] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [bidAmount, setBidAmount] = useState(product.price_nzd + 1);
 
   return (
     <div className={styles.card}>
       {/* Header — watchlist + remove */}
       <div className={styles.cardHeader}>
-        <WatchlistHeart />
-        <button
-          className={styles.removeButton}
-          onClick={() => onRemove?.()}
-          aria-label={`Remove ${product.title || "item"} from comparison`}
-        >
+        <WatchlistButton />
+        <button className={styles.removeButton} onClick={onRemove}>
           ✕
         </button>
       </div>
 
       {/* Product image */}
-      {product.imageUrl ? (
+      {product.images && product.images.length > 0 ? (
         <img
-          src={product.imageUrl}
-          alt={product.title || "Product image"}
+          src={product.images[0]}
+          alt={product.title}
           className={styles.image}
         />
       ) : (
         <div className={styles.imagePlaceholder} />
       )}
 
+      {/* Arrow button — mobile only */}
+      <button
+        className={styles.expandButton}
+        onClick={() => setExpanded(!expanded)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          style={{
+            transform: expanded ? "rotate(180deg)" : "rotate(0deg)",
+            transition: "transform 0.2s",
+          }}
+        >
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+
       {/* Product details */}
-      <div className={styles.body}>
+      <div className={`${styles.body} ${expanded ? styles.expanded : ""}`}>
+        <p className={styles.descriptionHeading}>Description</p>
         <p className={styles.title}>{product.title || "No title"}</p>
 
         {product.description && (
@@ -48,13 +65,10 @@ export default function CompareCard({ product = {}, onRemove }) {
 
         <p className={styles.detail}>
           <span>Price: </span>
-<<<<<<< HEAD
+          {product.price_nzd ? `$${product.price_nzd}` : "—"}
           {typeof product.price === "number"
             ? currencyFormatter.format(product.price)
             : "—"}
-=======
-          {product.price_nzd ? `$${product.price_nzd}` : "—"}
->>>>>>> 80f0f0001a4d766d5a6e62afeb2797cad763a847
         </p>
 
         <p className={styles.detail}>
@@ -69,24 +83,17 @@ export default function CompareCard({ product = {}, onRemove }) {
 
         {/* 2. Render a normal button in the footer to trigger the modal */}
         <div className={styles.footer}>
-          <button
-            className={styles.bidButton || styles.button} // Uses their card styles
-            onClick={() => setIsModalOpen(true)}
-          >
-            Place Bid
-          </button>
+          <PlaceBidButton onClick={() => setShowModal(true)} />
         </div>
       </div>
-
-      {/* 3. Render the actual modal overlay safely at the root level if open */}
-      {isModalOpen && (
-        <PlaceBidModal
-          productId={product._id}
-          bidAmount={product.price}
-          onClose={() => setIsModalOpen(false)}
+      {showModal && (
+        <BidModal
+          listing={product}
+          bidAmount={bidAmount}
+          setBidAmount={setBidAmount}
+          onClose={() => setShowModal(false)}
           onContinue={() => {
-            console.log("Bid submitted for:", product._id);
-            setIsModalOpen(false); // Close modal on success
+            setShowModal(false);
           }}
         />
       )}
