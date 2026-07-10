@@ -76,3 +76,39 @@
   justify-content: flex-end;
   padding: 8px 4px 4px;
 }
+
+.expandButton {
+  display: none;
+  width: 60%;
+  margin: 8px auto;
+  padding: 6px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 85vw;
+    max-width: 85vw;
+  }
+
+  .expandButton {
+    display: block;
+  }
+
+  .body {
+    display: none;
+    border: none;
+  }
+
+  .expanded {
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+  }
+}
