@@ -1,41 +1,14 @@
-import { Watchlist } from "../models/watchlistModel.js";
+import express from "express";
+import {
+  getWatchlist,
+  addToWatchlist,
+  removeFromWatchlist,
+} from "../controllers/watchlistController.js";
 
-export const getWatchlist = async (req, res) => {
-  try {
-    const data = await Watchlist.find({});
-    res.json(data);
-  } catch (err) {
-    res.status(500).json({ error: "Failed to read watchlist from database" });
-  }
-};
+const router = express.Router();
 
-export const addToWatchlist = async (req, res) => {
-  try {
-    const { itemId, title, price_nzd, location, category } = req.body;
+router.get("/", getWatchlist);
+router.post("/", addToWatchlist);
+router.delete("/:itemId", removeFromWatchlist);
 
-    const existing = await Watchlist.findOne({ itemId });
-    if (existing) {
-      return res.status(200).json(existing); // already watchlisted, no duplicate
-    }
-
-    const newEntry = await Watchlist.create({
-      itemId,
-      title,
-      price_nzd,
-      location,
-      category,
-    });
-    res.status(201).json(newEntry);
-  } catch (err) {
-    res.status(500).json({ error: "Failed to add item to watchlist" });
-  }
-};
-
-export const removeFromWatchlist = async (req, res) => {
-  try {
-    await Watchlist.deleteOne({ itemId: req.params.itemId });
-    res.status(200).json({ message: "Removed from watchlist" });
-  } catch (err) {
-    res.status(500).json({ error: "Failed to remove item from watchlist" });
-  }
-};
+export default router;

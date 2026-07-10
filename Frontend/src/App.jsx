@@ -3,7 +3,6 @@ import HomePage from "./pages/HomePage/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import ComparePage from "./pages/ComparePage";
 import PlaceBidPage from "./pages/PlaceBidPage";
-import ListingPage from "./pages/ListingPage/ListingPage";
 
 export default function App() {
   return (
@@ -11,8 +10,8 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/category" element={<CategoryPage />} />
       <Route path="/compare" element={<ComparePage />} />
-      <Route path="/place-bid/:id" element={<PlaceBidPage />} />
-      <Route path="/listing/:id" element={<ListingPage />} />
+      <Route path="/listing/:id" element={<ListingPage />} />{" "}
+      {/* <-- Using real ListingPage */}
     </Routes>
   );
 }
