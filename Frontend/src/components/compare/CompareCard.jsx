@@ -1,4 +1,4 @@
-import WatchlistHeart from "../ui/SharedComponents/WatchlistHeart";
+import WatchlistButton from "../ui/SharedComponents/WatchlistButton";
 import PlaceBidButton from "../ui/SharedComponents/PlaceBidButton";
 import styles from "./CompareCard.module.css";
 
@@ -7,7 +7,7 @@ export default function CompareCard({ product, onRemove }) {
     <div className={styles.card}>
       {/* Header — watchlist + remove */}
       <div className={styles.cardHeader}>
-        <WatchlistHeart />
+        <WatchlistButton />
         <button className={styles.removeButton} onClick={onRemove}>
           ✕
         </button>
@@ -16,7 +16,7 @@ export default function CompareCard({ product, onRemove }) {
       {/* Product image */}
       {product.imageUrl ? (
         <img
-          src={product.imageUrl}
+          src={product.images[0]}
           alt={product.title}
           className={styles.image}
         />
@@ -26,6 +26,7 @@ export default function CompareCard({ product, onRemove }) {
 
       {/* Product details */}
       <div className={styles.body}>
+        <p className={styles.descriptionHeading}>Description</p>
         <p className={styles.title}>{product.title || "No title"}</p>
 
         {product.description && (

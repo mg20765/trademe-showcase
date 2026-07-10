@@ -37,9 +37,10 @@
 .carousel {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
   overflow-x: auto;
-  padding-bottom: 1rem;
+  padding: 2rem;
 }
 
 .addButtonWrapper {
