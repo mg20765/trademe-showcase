@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import CategoryPage from "./pages/CategoryPage";
-import ListingPage from "./pages/ListingPage/ListingPage";
 import ComparePage from "./pages/ComparePage";
 import PlaceBidPage from "./pages/PlaceBidPage";
+import ListingPage from "./pages/ListingPage/ListingPage";
 
 export default function App() {
   return (

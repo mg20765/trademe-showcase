@@ -3,14 +3,17 @@ import styles from "./ListingGallery.module.css";
 
 import LeftArrow from "../../../assets/LeftArrow.svg";
 import RightArrow from "../../../assets/RightArrow.svg";
+import ImageZoom from "./ImageZoom";
 
 export default function ListingGallery({ listing }) {
   const galleryImages = listing.images || [];
-  const [selectedImage, setSelectedImage] = useState(null);
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [imageZoomOpen, setImageZoomOpen] = useState(false);
 
   useEffect(() => {
     if (galleryImages.length > 0) {
-      setSelectedImage(galleryImages[0]);
+      setSelectedIndex(0);
     }
   }, [galleryImages]);
 
@@ -19,40 +22,36 @@ export default function ListingGallery({ listing }) {
   }
 
   const showPreviousImage = () => {
-    const currentIndex = galleryImages.indexOf(selectedImage);
-
-    const previousIndex = currentIndex === 0 ? galleryImages.length - 1 : currentIndex - 1;
-
-    setSelectedImage(galleryImages[previousIndex]);
+    setSelectedIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1));
   };
 
   const showNextImage = () => {
-    const currentIndex = galleryImages.indexOf(selectedImage);
-
-    const nextIndex = currentIndex === galleryImages.length - 1 ? 0 : currentIndex + 1;
-
-    setSelectedImage(galleryImages[nextIndex]);
+    setSelectedIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
   };
 
   return (
-    <div className={styles.gallery}>
-      <div className={styles.mainImageContainer}>
-        <img src={selectedImage} alt="Listing" className={styles.mainImage} />
+    <>
+      <div className={styles.gallery}>
+        <div className={styles.mainImageContainer}>
+          <img src={galleryImages[selectedIndex]} alt="Listing" className={styles.mainImage} onClick={() => setImageZoomOpen(true)} />
 
-        <button className={`${styles.arrowButton} ${styles.leftArrow}`} onClick={showPreviousImage}>
-          <img src={LeftArrow} alt="Previous image" />
-        </button>
+          <button className={`${styles.arrowButton} ${styles.leftArrow}`} onClick={showPreviousImage}>
+            <img src={LeftArrow} alt="Previous image" />
+          </button>
 
-        <button className={`${styles.arrowButton} ${styles.rightArrow}`} onClick={showNextImage}>
-          <img src={RightArrow} alt="Next image" />
-        </button>
+          <button className={`${styles.arrowButton} ${styles.rightArrow}`} onClick={showNextImage}>
+            <img src={RightArrow} alt="Next image" />
+          </button>
+        </div>
+
+        <div className={styles.thumbnailRow}>
+          {galleryImages.map((image, index) => (
+            <img key={index} src={image} alt={`Thumbnail ${index + 1}`} className={`${styles.thumbnail} ${selectedIndex === index ? styles.activeThumbnail : ""}`} onClick={() => setSelectedIndex(index)} />
+          ))}
+        </div>
       </div>
 
-      <div className={styles.thumbnailRow}>
-        {galleryImages.map((image, index) => (
-          <img key={index} src={image} alt={`Thumbnail ${index + 1}`} className={`${styles.thumbnail} ${selectedImage === image ? styles.activeThumbnail : ""}`} onClick={() => setSelectedImage(image)} />
-        ))}
-      </div>
-    </div>
+      <ImageZoom open={imageZoomOpen} images={galleryImages} currentIndex={selectedIndex} onClose={() => setImageZoomOpen(false)} onChangeImage={setSelectedIndex} />
+    </>
   );
 }

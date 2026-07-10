@@ -11,6 +11,11 @@ import SimilarListings from "./SimilarListings/SimilarListings";
 import PlaceBidModal from "../../components/ui/SharedComponents/PlaceBidModal/PlaceBidModal.jsx";
 import BidConfirmationModal from "../../components/ui/SharedComponents/BidConfirmationModal/BidConfirmationModal.jsx";
 
+import Header from "../HomePage/HomeComponents/Header.jsx";
+import Footer from "../HomePage/HomeComponents/Footer.jsx";
+import { useCompare } from "../../components/Context/CompareContext.jsx";
+import PageAds from "./PageAds/PageAds.jsx";
+
 export default function ListingPage() {
   // The bidding and buy now modals
   const [listing, setListing] = useState(null);
@@ -26,7 +31,9 @@ export default function ListingPage() {
 
   // Compare Popup
   const [showCompare, setShowCompare] = useState(false);
+  const { addToCompare } = useCompare();
   const handleCompare = () => {
+    addToCompare(listing);
     setShowCompare(true);
   };
 
@@ -50,22 +57,26 @@ export default function ListingPage() {
   if (!listing) {
     return <p>Loading...</p>;
   }
-
+  console.log(listing);
+  console.log("buyNow:", listing?.buyNow);
   return (
     <>
       <main className={styles.page}>
+        <Header />
         <div className={styles.topSection}>
           <div className={styles.listingImage}>
             <ListingGallery listing={listing} />
           </div>
-          <ListingInfo listing={listing} onCompare={handleCompare} onPlaceBid={() => setShowBidModal(true)} />{" "}
+
+          <div className={styles.listingInfo}>
+            <ListingInfo listing={listing} onCompare={handleCompare} onPlaceBid={() => setShowBidModal(true)} />
+          </div>
         </div>
-
         <Questions questions={listing.questions} />
-
         <SimilarListings listings={listing.similarListings} />
-        {showCompare && <ComparePopUp />}
-
+        <PageAds />
+        <Footer />
+        {showCompare && <ComparePopUp />}{" "}
         {showBidModal && (
           <PlaceBidModal
             listing={listing}
@@ -78,7 +89,6 @@ export default function ListingPage() {
             }}
           />
         )}
-
         {showBidConfirmation && (
           <BidConfirmationModal
             bidAmount={bidAmount}
