@@ -57,7 +57,8 @@ export default function ListingPage() {
   if (!listing) {
     return <p>Loading...</p>;
   }
-
+  console.log(listing);
+  console.log("buyNow:", listing?.buyNow);
   return (
     <>
       <main className={styles.page}>
