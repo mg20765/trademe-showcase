@@ -13,15 +13,15 @@ export default function useCompare() {
 
   // Load comparison list on mount
 
-  const fetchComparison = async () => {
+  const fetchComparison = async (silent = false) => {
     try {
-      setLoading(true);
+      if (!silent) setLoading(true);
       const data = await getComparisonList();
       setProducts(data.productIds || []);
     } catch (_err) {
       setError("Failed to load comparison list");
     } finally {
-      setLoading(false);
+      if (!silent) setLoading(false);
     }
   };
 
@@ -34,8 +34,8 @@ export default function useCompare() {
 
   const handleAdd = async (productId) => {
     try {
-      const data = await addToComparison(productId);
-      setProducts(data.productIds || []);
+      await addToComparison(productId);
+      await fetchComparison(true);
     } catch (_err) {
       setError("Failed to add product");
     }
@@ -43,8 +43,8 @@ export default function useCompare() {
 
   const handleRemove = async (productId) => {
     try {
-      const data = await removeFromComparison(productId);
-      setProducts(data.productIds || []);
+      await removeFromComparison(productId);
+      await fetchComparison(true);
     } catch (_err) {
       setError("Failed to remove product");
     }

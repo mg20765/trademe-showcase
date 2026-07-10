@@ -35,7 +35,7 @@ export default function useWatchlist() {
           return next;
         });
       } else {
-        await fetch("http://localhost:3001/api/watchlist", {
+        await fetch("http://localhost:5001/api/watchlist", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
