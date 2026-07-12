@@ -13,12 +13,8 @@ const seedProducts = async () => {
     await mongoose.connect(process.env.MONGO_URI);
     console.log("MongoDB connected for seeding");
 
-<<<<<<< HEAD
     // --- Products (existing) ---
-    const rawData = fs.readFileSync("../bookshelf.json", "utf-8");
-=======
     const rawData = fs.readFileSync("./bookshelf.json", "utf-8");
->>>>>>> 80f0f0001a4d766d5a6e62afeb2797cad763a847
     const jsonData = JSON.parse(rawData);
 
     // Support both formats of bookshelf.json
@@ -35,18 +31,20 @@ const seedProducts = async () => {
     console.log("bookshelf.json data seeded successfully");
 
     // --- Chairs (new) ---
-    const chairsRaw = fs.readFileSync("../chairs.json", "utf-8");
+    const chairsRaw = fs.readFileSync("./chairs.json", "utf-8");
     const chairsJson = JSON.parse(chairsRaw);
     const chairListings = (chairsJson.listings || chairsJson).map((item) => {
       const { _id, ...rest } = item;
       return rest;
     });
 
+    await Chair.deleteMany();
+    console.log("Old chairs removed");
     await Chair.insertMany(chairListings);
     console.log(`Seeded ${chairListings.length} chairs`);
 
     // --- Bookshelves (new) ---
-    const bookshelvesRaw = fs.readFileSync("../bookshelf.json", "utf-8");
+    const bookshelvesRaw = fs.readFileSync("./bookshelfcategory.json", "utf-8");
     const bookshelvesJson = JSON.parse(bookshelvesRaw);
     const bookshelfListings = (bookshelvesJson.listings || bookshelvesJson).map(
       (item) => {
@@ -55,6 +53,8 @@ const seedProducts = async () => {
       },
     );
 
+    await Bookshelf.deleteMany();
+    console.log("Old bookshelves removed");
     await Bookshelf.insertMany(bookshelfListings);
     console.log(`Seeded ${bookshelfListings.length} bookshelves`);
 

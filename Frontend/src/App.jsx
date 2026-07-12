@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import ComparePage from "./pages/ComparePage";
 import PlaceBidPage from "./pages/PlaceBidPage";
-
+import ListingPage from "./pages/ListingPage/ListingPage"; // <-- Import the real ListingPage
 export default function App() {
   return (
     <Routes>
