@@ -4,6 +4,7 @@ import useCompare from "../hooks/useCompare";
 import CategoryCard from "../components/ui/SharedComponents/CategoryCard.jsx";
 import Header from "./HomePage/HomeComponents/Header";
 import Footer from "./HomePage/HomeComponents/Footer";
+import ScrollableGrid from "../components/scrollable-grid/scrollable-grid.jsx";
 
 import "./CategoryPage.css";
 
@@ -20,16 +21,51 @@ export default function CategoryPage() {
   const [currentCategory, setCurrentCategory] = useState("chairs");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [checkedConditions, setCheckedConditions] = useState({
+    "All item conditions": true,
+    "Brand New": false,
+    "Pre-Owned / Used": false,
+  });
 
   const { watchlistIds, toggleWatchlist } = useWatchlist();
   const { products: comparedProducts, handleAdd, handleRemove } = useCompare();
 
-  const [searchTerm, setSearchTerm] = useState("");
-  const filteredItems = items.filter((item) =>
-    item.title?.toLowerCase().includes(searchTerm.toLowerCase()),
-  );
-
   const isItemCompared = (itemId) => comparedProducts.includes(itemId);
+
+  const handleConditionChange = (label) => {
+    setCheckedConditions((prev) => {
+      if (label === "All item conditions") {
+        return {
+          "All item conditions": !prev["All item conditions"],
+          "Brand New": false,
+          "Pre-Owned / Used": false,
+        };
+      }
+      return {
+        ...prev,
+        "All item conditions": false,
+        [label]: !prev[label],
+      };
+    });
+  };
+
+  const filteredItems = items.filter((item) => {
+    const matchesSearch = item.title
+      ?.toLowerCase()
+      .includes(searchTerm.toLowerCase());
+
+    const noSpecificFilterActive =
+      !checkedConditions["Brand New"] && !checkedConditions["Pre-Owned / Used"];
+
+    const matchesCondition =
+      checkedConditions["All item conditions"] ||
+      noSpecificFilterActive ||
+      (checkedConditions["Brand New"] && item.condition === "New") ||
+      (checkedConditions["Pre-Owned / Used"] && item.condition === "Used");
+
+    return matchesSearch && matchesCondition;
+  });
 
   useEffect(() => {
     const controller = new AbortController();
@@ -114,10 +150,15 @@ export default function CategoryPage() {
           <h3 style={{ marginTop: "24px" }}>Filter Condition</h3>
           <ul>
             {["All item conditions", "Brand New", "Pre-Owned / Used"].map(
-              (label, i) => (
+              (label) => (
                 <li key={label}>
                   <label>
-                    <input type="checkbox" defaultChecked={i === 0} /> {label}
+                    <input
+                      type="checkbox"
+                      checked={checkedConditions[label]}
+                      onChange={() => handleConditionChange(label)}
+                    />{" "}
+                    {label}
                   </label>
                 </li>
               ),
@@ -141,31 +182,27 @@ export default function CategoryPage() {
                 </h2>
               </header>
 
-              <div className="product-grid">
-                {filteredItems.length === 0 ? (
-                  <p className="no-items">No items found in this category.</p>
-                ) : (
-                  filteredItems.map((item) => {
-                    const itemId = item._id || item.id;
-                    return (
-                      <CategoryCard
-                        key={itemId}
-                        item={item}
-                        isWatchlisted={watchlistIds.has(itemId)}
-                        onToggleWatchlist={(item) =>
-                          toggleWatchlist(item, currentCategory)
-                        }
-                        isCompared={isItemCompared(itemId)}
-                        onToggleCompare={(item) =>
-                          isItemCompared(itemId)
-                            ? handleRemove(itemId)
-                            : handleAdd(itemId)
-                        }
-                      />
-                    );
-                  })
-                )}
-              </div>
+              <ScrollableGrid emptyMessage="No items found in this category.">
+                {filteredItems.map((item) => {
+                  const itemId = item._id || item.id;
+                  return (
+                    <CategoryCard
+                      key={itemId}
+                      item={item}
+                      isWatchlisted={watchlistIds.has(itemId)}
+                      onToggleWatchlist={(item) =>
+                        toggleWatchlist(item, currentCategory)
+                      }
+                      isCompared={isItemCompared(itemId)}
+                      onToggleCompare={(item) =>
+                        isItemCompared(itemId)
+                          ? handleRemove(itemId)
+                          : handleAdd(itemId)
+                      }
+                    />
+                  );
+                })}
+              </ScrollableGrid>
             </>
           )}
         </main>
