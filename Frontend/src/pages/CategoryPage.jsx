@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import useWatchlist from "../hooks/useWatchlist";
-import WatchlistButton from "../components/ui/SharedComponents/WatchlistButton";
-import CompareButtonSml from "../components/ui/SharedComponents/CompareButton-sml";
-import WatchlistcheckIcon from "../components/ui/SharedComponents/WatchlistcheckIcon";
+import useCompare from "../hooks/useCompare";
 import CategoryCard from "../components/ui/SharedComponents/CategoryCard.jsx";
+import Header from "./HomePage/HomeComponents/Header";
+import Footer from "./HomePage/HomeComponents/Footer";
 
 import "./CategoryPage.css";
 
@@ -22,13 +22,16 @@ export default function CategoryPage() {
   const [error, setError] = useState(null);
 
   const { watchlistIds, toggleWatchlist } = useWatchlist();
+  const { products: comparedProducts, handleAdd, handleRemove } = useCompare();
+
   const [searchTerm, setSearchTerm] = useState("");
   const filteredItems = items.filter((item) =>
     item.title?.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
+  const isItemCompared = (itemId) => comparedProducts.includes(itemId);
+
   useEffect(() => {
-    // AbortController is the modern way to cancel fetch requests
     const controller = new AbortController();
 
     const fetchCategoryData = async () => {
@@ -57,37 +60,13 @@ export default function CategoryPage() {
 
     fetchCategoryData();
 
-    // Cleanup function runs when currentCategory changes or component unmounts
     return () => controller.abort();
   }, [currentCategory, searchTerm]);
 
   return (
     <div className="site-wrapper">
-      <nav className="navbar">
-        <div className="nav-container">
-          <div className="logo-placeholder">Trade Me</div>
-          <div className="search-bar-container">
-            <input
-              type="text"
-              placeholder={`Search across ${currentCategory}...`}
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <button
-              className="search-btn"
-              onClick={() => setSearchTerm("")}
-              aria-label="Clear search"
-            >
-              ✕
-            </button>
-          </div>
-          <div className="nav-links">
-            <span>Watchlist</span>
-            <span>My Account</span>
-          </div>
-        </div>
-      </nav>
-      {/* HERO SECTION - full width band, sits above the sidebar/grid layout */}
+      <Header />
+
       <section className="hero-section">
         <div className="hero-container">
           <p className="hero-breadcrumb">Home / All Categories</p>
@@ -167,7 +146,6 @@ export default function CategoryPage() {
                   <p className="no-items">No items found in this category.</p>
                 ) : (
                   filteredItems.map((item) => {
-                    // Ensure we use the correct ID property
                     const itemId = item._id || item.id;
                     return (
                       <CategoryCard
@@ -176,6 +154,12 @@ export default function CategoryPage() {
                         isWatchlisted={watchlistIds.has(itemId)}
                         onToggleWatchlist={(item) =>
                           toggleWatchlist(item, currentCategory)
+                        }
+                        isCompared={isItemCompared(itemId)}
+                        onToggleCompare={(item) =>
+                          isItemCompared(itemId)
+                            ? handleRemove(itemId)
+                            : handleAdd(itemId)
                         }
                       />
                     );
@@ -187,9 +171,7 @@ export default function CategoryPage() {
         </main>
       </div>
 
-      <footer className="site-footer">
-        <p>© 2026 BrAInbots Category View.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
