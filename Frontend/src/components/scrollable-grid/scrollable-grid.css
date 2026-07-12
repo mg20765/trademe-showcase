@@ -1,0 +1,66 @@
+.scrollable-grid-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scrollable-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px 0;
+  scrollbar-width: none;
+}
+.scrollable-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable-grid > * {
+  flex: 0 0 auto;
+  width: 220px; /* adjust to match your card width */
+}
+
+.scroll-arrow {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+.scroll-arrow-left {
+  margin-right: 8px;
+}
+
+.scroll-arrow-right {
+  margin-left: 8px;
+}
+
+/* On larger screens, switch to a normal wrapping grid, no scroll/arrows */
+@media (min-width: 900px) {
+  .scrollable-grid {
+    overflow-x: visible;
+    flex-wrap: wrap;
+  }
+  .scroll-arrow {
+    display: none;
+  }
+}
+.scrollable-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 8px 0;
+  scrollbar-width: thin; /* temporarily show scrollbar to see if it's there */
+}
+
+.scrollable-grid > * {
+  flex: 0 0 auto;
+  min-width: 220px;
+}

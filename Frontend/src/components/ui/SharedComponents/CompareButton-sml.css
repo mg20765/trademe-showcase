@@ -1,0 +1,23 @@
+.compare-button-sml {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.compare-button-sml:hover {
+  transform: scale(1.05);
+}
+
+.compare-button-sml svg {
+  width: 56px;
+  height: 28px;
+  display: block;
+}
