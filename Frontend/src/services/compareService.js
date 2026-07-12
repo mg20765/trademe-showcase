@@ -1,6 +1,5 @@
-//Temporary until authentication is added
 const SESSION_ID = "user-session-id";
-const BASE_URL = "http://localhost:5001/api/comparisons"; // Adjust this to your backend URL
+const BASE_URL = "http://localhost:5001/api/comparisons";
 
 const handleResponse = async (response) => {
   if (!response.ok) {
@@ -9,37 +8,36 @@ const handleResponse = async (response) => {
   }
   return response.json();
 };
-//GET /api/comparison
+
+// GET /api/comparisons
 export const getComparisonList = async () => {
-  const response = await fetch(`/api/comparisons?sessionId=${SESSION_ID}`);
-  return response.json();
+  const response = await fetch(`${BASE_URL}?sessionId=${SESSION_ID}`);
+  return handleResponse(response);
 };
 
-//POST /api/comparison
+// POST /api/comparisons
 export const addToComparison = async (productId) => {
-  const response = await fetch("/api/comparisons", {
+  const response = await fetch(BASE_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sessionId: SESSION_ID, productId }),
   });
-  return response.json();
+  return handleResponse(response);
 };
 
-//DELETE /api/comparison/:productId
+// DELETE /api/comparisons/:productId
 export const removeFromComparison = async (productId) => {
   const response = await fetch(
-    `/api/comparisons/${productId}?sessionId=${SESSION_ID}`,
-    {
-      method: "DELETE",
-    },
+    `${BASE_URL}/${productId}?sessionId=${SESSION_ID}`,
+    { method: "DELETE" },
   );
-  return response.json();
+  return handleResponse(response);
 };
 
 // DELETE /api/comparisons
 export const clearComparison = async () => {
-  const response = await fetch(`/api/comparisons?sessionId=${SESSION_ID}`, {
+  const response = await fetch(`${BASE_URL}?sessionId=${SESSION_ID}`, {
     method: "DELETE",
   });
-  return response.json();
+  return handleResponse(response);
 };

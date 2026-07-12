@@ -1,6 +1,6 @@
 import Comparison from "../models/Comparison.js";
 
-// Get /api/comparison
+// Get /api/comparisons
 export const getComparisonList = async (req, res) => {
   try {
     const { sessionId } = req.query;
@@ -13,19 +13,23 @@ export const getComparisonList = async (req, res) => {
   }
 };
 
-// Post /api/comparison
+// Post /api/comparisons
 export const addToComparison = async (req, res) => {
   try {
     const { sessionId, productId } = req.body;
+    console.log("Received sessionId:", sessionId, "productId:", productId);
 
     let comparison = await Comparison.findOne({ sessionId });
+    console.log("Existing comparison found:", comparison);
 
     if (!comparison) {
-      //Creating a new comparison list
       comparison = new Comparison({ sessionId, productIds: [productId] });
     } else {
-      //Only allowing a maximum of 8 products
       if (comparison.productIds.length >= 8) {
+        console.log(
+          "Hit the 8-item limit! Current productIds:",
+          comparison.productIds,
+        );
         return res
           .status(400)
           .json({ message: "Maximum 8 products can be compared" });
@@ -40,7 +44,7 @@ export const addToComparison = async (req, res) => {
   }
 };
 
-//Delete /api/comparison/:productId
+// Delete /api/comparisons/:productId
 export const removeFromComparison = async (req, res) => {
   try {
     const { sessionId } = req.query;
@@ -56,11 +60,13 @@ export const removeFromComparison = async (req, res) => {
     await comparison.save();
     res.json(comparison);
   } catch (error) {
-    res.status(500).json({ message: "Failed to clear comparison list" });
+    res
+      .status(500)
+      .json({ message: "Failed to remove product from comparison" });
   }
 };
 
-//Delete /api/comparison
+// Delete /api/comparisons
 export const clearComparison = async (req, res) => {
   try {
     const { sessionId } = req.query;
