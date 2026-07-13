@@ -68,8 +68,7 @@ export default function useWatchlist() {
     }
   };
 
-  // Direct remove, used by the header watchlist panel where we already
-  // know the item is saved (no need to check/toggle).
+  //Function to remove an item from the watchlist
   const removeFromWatchlist = async (itemId) => {
     try {
       await fetch(`http://localhost:5001/api/watchlist/${itemId}`, {

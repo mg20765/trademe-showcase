@@ -27,7 +27,7 @@ src/
 │       ├── PlaceBidButton.jsx     # Action button for placing bids
 │       ├── WatchlistButton.jsx    # General watchlist action handler
 │       ├── WatchlistcheckIcon.jsx # Status icon for watchlisted items
-│       └── WatchlistHeart.jsx     # Visual heart indicator for items
+│
 ├── hooks/
 │   ├── useCompare.js              # State logic for item comparison matrix
 │   └── usewatchList.js            # State logic for user watchlists
