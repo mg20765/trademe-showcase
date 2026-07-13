@@ -4,7 +4,7 @@
 // - Managing comparison items
 // - Removing items from the list
 
-import ComparePopupIcon from "./ComparePopupIcon";
+import ComparePopupIcon from "./ComparePopUpIcon";
 import DoubleArrow from "../../../../assets/DoubleArrow.svg";
 import styles from "./ComparePopUp.module.css";
 import { useCompare } from "../../../Context/CompareContext.jsx";

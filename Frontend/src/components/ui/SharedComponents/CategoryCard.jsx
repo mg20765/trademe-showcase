@@ -1,8 +1,8 @@
 import React, { memo, useCallback } from "react";
 import WatchlistButton from "./WatchlistButton.jsx";
-import WatchlistCheckIcon from "./WatchlistCheckIcon.jsx";
+import WatchlistCheckIcon from "./WatchlistcheckIcon.jsx";
 import CompareButtonSml from "./CompareButton-sml.jsx";
-import "./CategoryCard.css";
+import "./categoryCard.css";
 
 const CategoryCard = memo(
   ({ item, isWatchlisted, onToggleWatchlist, isCompared, onToggleCompare }) => {
