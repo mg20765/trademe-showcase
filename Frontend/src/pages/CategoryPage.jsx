@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import useWatchlist from "../hooks/useWatchlist";
+import useWatchlist from "../hooks/usewatchList";
 import useCompare from "../hooks/useCompare";
 import CategoryCard from "../components/ui/SharedComponents/CategoryCard.jsx";
 import Header from "./HomePage/HomeComponents/Header";
