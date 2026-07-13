@@ -1,0 +1,102 @@
+/* Invisible click-catcher so clicking outside the panel closes it */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: transparent;
+}
+
+/* Dropdown panel itself, anchored under the header heart icon */
+.panel {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+
+  width: 320px;
+  max-height: 420px;
+  overflow-y: auto;
+
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+  padding: 20px;
+  z-index: 1001;
+
+  text-align: left;
+}
+
+.header {
+  margin-bottom: 14px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #3f3b37;
+}
+
+.empty {
+  color: #777;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 12px;
+
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.itemTitle {
+  font-size: 14px;
+  color: #3f3b37;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemPrice {
+  font-size: 13px;
+  font-weight: 700;
+  color: #3f3b37;
+}
+
+.removeButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 16px;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.removeButton:hover {
+  color: #d33;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    right: -20px;
+    width: 280px;
+  }
+}
