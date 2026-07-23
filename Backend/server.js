@@ -1,6 +1,6 @@
 import { setDefaultResultOrder } from "dns";
 setDefaultResultOrder("ipv4first");
-
+import productRoutes from "./routes/productRoutes.js";
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -22,7 +22,7 @@ app.use("/api/home", homeRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/comparisons", comparisonRoutes);
 app.use("/api/watchlist", watchlistRoutes);
-
+app.use("/api/products", productRoutes);
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
