@@ -4,6 +4,11 @@ import PlaceBidButton from "../ui/SharedComponents/PlaceBidButton";
 import BidModal from "../ui/SharedComponents/PlaceBidModal/PlaceBidModal";
 import styles from "./CompareCard.module.css";
 
+const currencyFormatter = new Intl.NumberFormat("en-NZ", {
+  style: "currency",
+  currency: "NZD",
+});
+
 export default function CompareCard({ product, onRemove }) {
   const [expanded, setExpanded] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -65,10 +70,11 @@ export default function CompareCard({ product, onRemove }) {
 
         <p className={styles.detail}>
           <span>Price: </span>
-          {product.price_nzd ? `$${product.price_nzd}` : "—"}
-          {typeof product.price === "number"
-            ? currencyFormatter.format(product.price)
-            : "—"}
+          {product.price_nzd
+            ? `$${product.price_nzd}`
+            : typeof product.price === "number"
+              ? currencyFormatter.format(product.price)
+              : "—"}
         </p>
 
         <p className={styles.detail}>

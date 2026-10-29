@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./BidConfirmationModal.module.css";
-import PlaceBidModal from "../PlaceBidModal/PlaceBidModal.jsx";
+import PlaceBidButton from "../PlaceBidButton.jsx";
 
 export default function BidConfirmationModal({
   bidAmount,
