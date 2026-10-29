@@ -18,7 +18,7 @@ export default function useCompare() {
       if (!silent) setLoading(true);
       const data = await getComparisonList();
       setProducts(data.productIds || []);
-    } catch (_err) {
+    } catch {
       setError("Failed to load comparison list");
     } finally {
       if (!silent) setLoading(false);
@@ -36,7 +36,7 @@ export default function useCompare() {
     try {
       await addToComparison(productId);
       await fetchComparison(true);
-    } catch (_err) {
+    } catch {
       setError("Failed to add product");
     }
   };
@@ -45,7 +45,7 @@ export default function useCompare() {
     try {
       await removeFromComparison(productId);
       await fetchComparison(true);
-    } catch (_err) {
+    } catch {
       setError("Failed to remove product");
     }
   };
@@ -54,7 +54,7 @@ export default function useCompare() {
     try {
       await clearComparison();
       setProducts([]);
-    } catch (_err) {
+    } catch {
       setError("Failed to clear comparison list");
     }
   };

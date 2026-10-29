@@ -3,7 +3,7 @@ export default function WatchlistCheckIcon({ onClick }) {
     <button
       onClick={onClick}
       className="watchlist-button"
-      aria-label="Toggle Button"
+      aria-label="Remove from watchlist"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

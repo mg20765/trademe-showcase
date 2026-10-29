@@ -194,7 +194,7 @@ export default function CategoryPage() {
                         toggleWatchlist(item, currentCategory)
                       }
                       isCompared={isItemCompared(itemId)}
-                      onToggleCompare={(item) =>
+                      onToggleCompare={() =>
                         isItemCompared(itemId)
                           ? handleRemove(itemId)
                           : handleAdd(itemId)

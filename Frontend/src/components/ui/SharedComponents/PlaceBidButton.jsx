@@ -3,6 +3,7 @@ export default function PlaceBidButton({ onClick, style, disabled, className }) 
     <button
       onClick={onClick}
       disabled={disabled}
+      className={className}
       style={{
         backgroundColor: "#DB9C13",
         color: "white",

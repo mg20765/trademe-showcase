@@ -3,7 +3,7 @@ export default function WatchlistButton({ onClick, showBackground = true }) {
     <button
       onClick={onClick}
       className="watchlist-button"
-      aria-label="Toggle Button"
+      aria-label="Add to watchlist"
       // This style inline block activates to be able to pass showBackground={false} where needed
       style={!showBackground ? { background: "none", border: "none", padding: 0 } : {}}
     >
