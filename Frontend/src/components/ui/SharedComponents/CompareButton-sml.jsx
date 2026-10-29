@@ -5,7 +5,7 @@ export default function CompareButtonSml({ onClick, showBackground = true }) {
     <button
       onClick={onClick}
       className="compare-button-sml"
-      aria-label="Toggle Button"
+      aria-label="Compare this item"
       style={
         !showBackground
           ? { background: "none", border: "none", padding: 0 }

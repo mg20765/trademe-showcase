@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from "react";
+import { memo, useCallback } from "react";
 import WatchlistButton from "./WatchlistButton.jsx";
 import WatchlistCheckIcon from "./WatchlistcheckIcon.jsx";
 import CompareButtonSml from "./CompareButton-sml.jsx";
@@ -6,14 +6,7 @@ import "./categoryCard.css";
 
 const CategoryCard = memo(
   ({ item, isWatchlisted, onToggleWatchlist, isCompared, onToggleCompare }) => {
-    if (!item) return null;
-
-    const numericPrice = Number(item.price_nzd ?? 0);
-    const displayPrice = numericPrice.toLocaleString("en-NZ", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-
+    // Hooks must run on every render, so they come before the early return below.
     const onWatchlistClick = useCallback(
       (e) => {
         e.stopPropagation();
@@ -33,6 +26,14 @@ const CategoryCard = memo(
       },
       [item, onToggleCompare],
     );
+
+    if (!item) return null;
+
+    const numericPrice = Number(item.price_nzd ?? 0);
+    const displayPrice = numericPrice.toLocaleString("en-NZ", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
 
     return (
       <div className={`product-card ${isWatchlisted ? "watchlisted" : ""}`}>

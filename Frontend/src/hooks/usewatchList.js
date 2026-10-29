@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
 
+// fetch only fails when the network is down. If the server answers "500" it still
+// counts as a reply, so check the answer before changing what the screen shows.
+async function send(url, options) {
+  const res = await fetch(url, options);
+  if (!res.ok) throw new Error(`Server answered ${res.status}`);
+  return res;
+}
+
 export default function useWatchlist() {
   const [watchlistIds, setWatchlistIds] = useState(new Set());
   const [watchlistItems, setWatchlistItems] = useState([]);
@@ -28,7 +36,7 @@ export default function useWatchlist() {
 
     try {
       if (alreadyIn) {
-        await fetch(`http://localhost:5001/api/watchlist/${itemId}`, {
+        await send(`http://localhost:5001/api/watchlist/${itemId}`, {
           method: "DELETE",
         });
         setWatchlistIds((prev) => {
@@ -40,7 +48,7 @@ export default function useWatchlist() {
           prev.filter((entry) => entry.itemId !== itemId),
         );
       } else {
-        await fetch("http://localhost:5001/api/watchlist", {
+        await send("http://localhost:5001/api/watchlist", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -71,7 +79,7 @@ export default function useWatchlist() {
   //Function to remove an item from the watchlist
   const removeFromWatchlist = async (itemId) => {
     try {
-      await fetch(`http://localhost:5001/api/watchlist/${itemId}`, {
+      await send(`http://localhost:5001/api/watchlist/${itemId}`, {
         method: "DELETE",
       });
       setWatchlistIds((prev) => {

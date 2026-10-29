@@ -9,4 +9,10 @@ export default defineConfig({
       "/api": "http://localhost:5001",
     },
   },
+  // Unit tests run in a pretend browser (jsdom), with no server or database.
+  test: {
+    environment: "jsdom",
+    setupFiles: "./src/test/setup.js",
+    css: false,
+  },
 });
