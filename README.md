@@ -2,6 +2,8 @@
 
 This application is used for browsing, searching, bidding, and managing marketplace listings. It interacts with the TradeMe Clone Backend to provide a seamless experience for filtering, watchlisting, and comparing items.
 
+> **Note:** This is a student project built during the Mission Ready course. It is not affiliated with, endorsed by or connected to Trade Me. The listing titles, prices and product photos are sample content used for learning and demonstration only. If you own any content shown here and would like it removed, please open an issue.
+
 🎨 Tech Stack
 
 CategoryTechnologies & ToolsFrontendReact, JavaScriptBackend & RuntimeNode.js, ExpressDatabase & SecurityMongoDB, CORSState & APICustom Hooks, Fetch API
@@ -41,6 +43,10 @@ bash npm install
 Start the local development server:
 
 bash npm run dev
+
+🧪 Running the tests
+
+In the Frontend folder, run `npm test`. This runs the unit and component tests (Vitest and React Testing Library) for the Watchlist, Category card, Compare card and Bid screens. They were added after the project was built, and they found and fixed real bugs.
 
 💡 Key Features & Implementation
 
